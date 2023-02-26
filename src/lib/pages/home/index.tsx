@@ -1,4 +1,4 @@
-import { Center, Code, Divider, Flex, Grid, HStack, Icon, Stack, Text } from "@chakra-ui/react";
+import { Center, Code, Divider, Flex, Grid, HStack, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import { Testimonials } from "./components/Testimonial";
 import { PhotoGallery } from "./components/GalleryWithHorizontalCarousel/App";
 import { IntroBanner } from "./components/IntroBanner";
@@ -66,7 +66,19 @@ const Home = () => (
                 frameBorder="0" allow="autoplay; encrypted-media"></iframe>
       </Flex>
     </Stack>
-    <Divider />
+    <Divider my="xl" />
+    <Center>
+      <Image
+        maxHeight="200px"
+        maxWidth="200px"
+        rounded="full"
+        overflow="hidden"
+        width="full"
+        height={{ base: "auto", md: "sm" }}
+        objectFit="cover"
+        src="https://media.tenor.com/SAJ5PrWD0DcAAAAC/diamond.gif"
+      />
+    </Center>
   </Grid>
 );
 
