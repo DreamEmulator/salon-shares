@@ -22,11 +22,12 @@ export const IntroBanner = () => {
         >
           <Box maxW="xl">
             <Heading as="h1" size="3xl" fontWeight="extrabold">
-              Build relationship with the your customers
+              Een bijzondere avond vol sterren.
             </Heading>
             <Text fontSize={{ md: "2xl" }} mt="4" maxW="lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Werkelijk wonderlijk wat voor een sfeer mensen met passie kunnen
+              maken. Hierbij mijn voorzet om zoveel mogelijk kennis,
+              vriendschappen, inzichten en vergezichten te delen 👇
             </Text>
             <Stack
               direction={{ base: "column", md: "row" }}
@@ -36,30 +37,15 @@ export const IntroBanner = () => {
               <Button
                 as="a"
                 href="#"
-                colorScheme="blue"
+                colorScheme="green"
                 px="8"
                 rounded="full"
                 size="lg"
                 fontSize="md"
                 fontWeight="bold"
               >
-                Get Started for Free
+                Toevoegen
               </Button>
-              <HStack
-                as="a"
-                transition="background 0.2s"
-                justify={{ base: "center", md: "flex-start" }}
-                href="#"
-                color="white"
-                rounded="full"
-                fontWeight="bold"
-                px="6"
-                py="3"
-                _hover={{ bg: "whiteAlpha.300" }}
-              >
-                <span>Talk to Sales</span>
-                <HiChevronRight />
-              </HStack>
             </Stack>
           </Box>
         </Box>
