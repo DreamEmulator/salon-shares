@@ -1,4 +1,4 @@
-import { Box, Center, Code, Divider, Flex, Grid, HStack, Icon, Stack, Text } from "@chakra-ui/react";
+import { Center, Code, Divider, Flex, Grid, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import { Testimonials } from "./components/Testimonial";
 import { PhotoGallery } from "./components/GalleryWithHorizontalCarousel/App";
 import { IntroBanner } from "./components/IntroBanner";
@@ -60,10 +60,11 @@ const Home = () => (
       >
         Muziek + Foto's
       </Text>
-      <Box p="4" bg="purple.50" boxShadow="lg">
-        <iframe width="640" height="480" src="https://www.youtube.com/embed/tv56iyECa-Y?rel=0&amp;showinfo=0"
+      <Flex minH="xl" borderRadius="xl" overflow="hidden" justifyContent="center" p="4" bg="purple.50" boxShadow="lg"
+            bgGradient="linear(to-r, gray.300, yellow.400, pink.200)">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tv56iyECa-Y?rel=0&amp;showinfo=0"
                 frameBorder="0" allow="autoplay; encrypted-media"></iframe>
-      </Box>
+      </Flex>
     </Stack>
     <Divider />
   </Grid>

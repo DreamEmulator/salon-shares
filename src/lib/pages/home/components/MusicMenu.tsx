@@ -6,12 +6,12 @@ export const MusicMenu = () => (<Flex width="xl">
       <MenuButton as={Button} rightIcon={<BiChevronDown />}>
         Music
       </MenuButton>
-      <MenuList minW="xl" p="4">
-        <Box borderRadius="xl" overflow="hidden">
-          {/*Grace Jones - Pars*/}
+      <MenuList minW="xl" p="4" zIndex="1000">
+        <Box borderRadius="64" overflow="hidden">
+          {/*MIX*/}
           <iframe
-            src="https://open.spotify.com/embed/track/6wphsmIFTdYIQKLxqHYLq9?utm_source=generator" width="100%"
-            height="152" frameBorder="0"
+            src="https://open.spotify.com/embed/playlist/6B0r4j8CHKHz21srXuPHVw?utm_source=generator&theme=0"
+            width="100%" height="352" frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           ></iframe>
         </Box>
@@ -19,6 +19,13 @@ export const MusicMenu = () => (<Flex width="xl">
     </Menu>
   </Flex>
 );
+
+// {/*Grace Jones - Pars*/}
+// <iframe
+//   src="https://open.spotify.com/embed/track/6wphsmIFTdYIQKLxqHYLq9?utm_source=generator" width="100%"
+//   height="152" frameBorder="0"
+//   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+// ></iframe>
 
 // {/*Gregor Schwellenbach*/}
 // <iframe
