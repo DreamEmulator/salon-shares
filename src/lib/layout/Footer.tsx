@@ -9,10 +9,9 @@ const Footer = () => {
       alignSelf="flex-end"
       justifyContent="center"
     >
-      <Text fontSize="xs">
-        {new Date().getFullYear()} -{" "}
-        <Link href="https://sznm.dev" isExternal>
-          sznm.dev
+      <Text color="pink" fontSize="l" fontWeight="bold">
+        <Link href="sebastiaan-hols.com" isExternal>
+          sebastiaan-hols.com
         </Link>
       </Text>
     </Flex>

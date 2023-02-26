@@ -1,4 +1,4 @@
-import { Center, Code, Divider, Flex, Grid, HStack, Icon, Text } from "@chakra-ui/react";
+import { Box, Center, Code, Divider, Flex, Grid, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import { Testimonials } from "./components/Testimonial";
 import { PhotoGallery } from "./components/GalleryWithHorizontalCarousel/App";
 import { IntroBanner } from "./components/IntroBanner";
@@ -34,7 +34,8 @@ const Home = () => (
       Foto's
     </Text>
     <PhotoGallery />
-    <Flex justify="space-around">
+    {/* DOWNLOAD CTA*/}
+    <Flex justify="space-around" my="12">
       <HStack>
         <Icon as={FiPlusCircle} />
         <Text fontSize="md" fontWeight="medium">
@@ -48,6 +49,22 @@ const Home = () => (
         </Text>
       </HStack>
     </Flex>
+    <Stack>
+      <Text
+        mt="4"
+        bgGradient="linear(-150deg,  #F0F, #FF0)"
+        bgClip="text"
+        fontSize="6xl"
+        fontWeight="extrabold"
+        align="center"
+      >
+        Muziek + Foto's
+      </Text>
+      <Box p="4" bg="purple.50" boxShadow="lg">
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/tv56iyECa-Y?rel=0&amp;showinfo=0"
+                frameBorder="0" allow="autoplay; encrypted-media"></iframe>
+      </Box>
+    </Stack>
     <Divider />
   </Grid>
 );
