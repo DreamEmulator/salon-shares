@@ -16,6 +16,10 @@ export const Carousel = forwardRef<HTMLDivElement, FlexProps>(function Carousel(
 ) {
   return (
     <Flex
+      boxShadow="lg"
+      p="2"
+      rounded="md"
+      bg="rgba(25,25,25,0.15)"
       ref={ref}
       className="chakra-carousel"
       overflow="hidden"

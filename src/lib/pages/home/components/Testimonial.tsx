@@ -1,8 +1,6 @@
 import {
   Box,
-  chakra,
   Flex,
-  HTMLChakraProps,
   Icon,
   Img,
   SimpleGrid,
@@ -24,13 +22,12 @@ interface TestimonialProps {
 
 const Testimonial = (props: TestimonialProps) => {
   const { logo, children, image, author, role, colorScheme: c } = props;
-  const accentColor = mode(`${c}.600`, `${c}.400`);
+  const accentColor = mode(`${c}.200`, `${c}.400`);
   return (
     <Flex
       direction="column"
       rounded={{ md: "lg" }}
-      bg={mode("white", "gray.700")}
-      shadow="lg"
+      bg={mode("white", "gray.400")}
     >
       <Flex
         direction="column"
@@ -124,14 +121,14 @@ const Testimonial = (props: TestimonialProps) => {
 
 export const Testimaonials = () => {
   return (
-    <Box as="section" bg={mode("gray.100", "gray.800")} py="12">
+    <Box as="section" py="12" boxShadow="outline" p="6" rounded="md" bg="white">
       <Box maxW={{ base: "xl", md: "6xl" }} mx="auto" px={{ md: "8" }}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing="10">
           <Testimonial
             logo={<Icon as={MdReceipt} boxSize={6} />}
             author="Kunle Adigun"
             role="Jop"
-            colorScheme="blue"
+            colorScheme="orange"
             image="https://images.unsplash.com/photo-1547037579-f0fc020ac3be?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI2fHxtYW4lMjBzbWlsaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
           >
             Hier komt een beschrijving van een tip. Bijv. een boek, film, plek

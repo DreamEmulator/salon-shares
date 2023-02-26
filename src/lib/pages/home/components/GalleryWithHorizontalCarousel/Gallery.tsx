@@ -41,6 +41,8 @@ export const Gallery = (props: GalleryProps) => {
     <Stack spacing="4" {...rootProps}>
       <AspectRatio ratio={aspectRatio}>
         <Image
+          rounded="10"
+          overflow="hidden"
           src={images[index].src}
           objectFit="cover"
           alt={images[index].alt}

@@ -1,18 +1,15 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Img,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import { HiChevronRight } from "react-icons/hi";
+import { Box, Button, Flex, Heading, Img, Stack, Text } from "@chakra-ui/react";
 
 export const IntroBanner = () => {
   return (
-    <Box bg="gray.800" as="section" minH="140px" position="relative">
+    <Box
+      bg="gray.800"
+      as="section"
+      minH="140px"
+      position="relative"
+      rounded="10"
+      overflow="hidden"
+    >
       <Box py="32" position="relative" zIndex={1}>
         <Box
           maxW={{ base: "xl", md: "7xl" }}
@@ -36,21 +33,25 @@ export const IntroBanner = () => {
             >
               <Button
                 as="a"
-                href="#"
-                colorScheme="green"
+                href="#foto's"
+                colorScheme="purple"
                 px="8"
                 rounded="full"
                 size="lg"
                 fontSize="md"
                 fontWeight="bold"
               >
-                Toevoegen
+                Foto's
               </Button>
             </Stack>
           </Box>
         </Box>
       </Box>
       <Flex
+        boxShadow="lg"
+        p="2"
+        rounded="md"
+        bg="white"
         id="image-wrapper"
         position="absolute"
         insetX="0"
