@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, Img, Stack, Text, useColorModeValue } from 
 
 export const IntroBanner = () => {
   return (
-    <Box
+    <Flex
       as="section"
       minH="140px"
       position="relative"
@@ -11,12 +11,12 @@ export const IntroBanner = () => {
     >
       <Box py="32" position="relative" zIndex={1}>
         <Box
-          maxW={{ base: "xl", md: "7xl" }}
+          maxW={{ base: "2xl", md: "7xl" }}
           mx="auto"
           px={{ base: "6", md: "8" }}
           color="white"
         >
-          <Box maxW="xl">
+          <Box maxW="xl" px="8">
             <Heading as="h1" size="3xl" fontWeight="extrabold">
               Een bijzondere avond vol sterren.
             </Heading>
@@ -33,14 +33,14 @@ export const IntroBanner = () => {
               <Button
                 as="a"
                 href="#foto's"
-                colorScheme="purple"
+                color="pink.400"
                 px="8"
                 rounded="full"
                 size="lg"
                 fontSize="md"
                 fontWeight="bold"
               >
-                Foto's
+                Bekijk de foto's
               </Button>
             </Stack>
           </Box>
@@ -48,7 +48,7 @@ export const IntroBanner = () => {
       </Box>
       <Flex
         boxShadow="lg"
-        p="2"
+        p="4"
         rounded="md"
         bg={useColorModeValue("pink.300", "blue.300")}
         id="image-wrapper"
@@ -59,6 +59,7 @@ export const IntroBanner = () => {
         h="full"
         overflow="hidden"
         align="center"
+        bgGradient="linear(to-r, gray.300, yellow.400, pink.200)"
       >
         <Box position="relative" w="full" h="full">
           <Img
@@ -73,6 +74,6 @@ export const IntroBanner = () => {
           <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
         </Box>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
