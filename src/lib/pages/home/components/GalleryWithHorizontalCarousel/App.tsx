@@ -4,7 +4,8 @@ import { Gallery } from "./Gallery";
 
 export const PhotoGallery = () => {
   return (
-    <Box rounded="lg" boxShadow="lg" p="10">
+    <Box rounded="lg" boxShadow="lg" p="5">
+      <div id="foto's"></div>
       <Gallery images={images} />
     </Box>
   );

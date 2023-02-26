@@ -1,20 +1,7 @@
-import {
-  AspectRatio,
-  HStack,
-  Image,
-  Skeleton,
-  Stack,
-  StackProps,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { AspectRatio, HStack, Image, Skeleton, Stack, StackProps, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
-import {
-  Carousel,
-  CarouselIconButton,
-  CarouselSlide,
-  useCarousel,
-} from "./Carousel";
+import { Carousel, CarouselIconButton, CarouselSlide, useCarousel } from "./Carousel";
 import { ProductImage } from "./_data";
 
 interface GalleryProps {
@@ -32,9 +19,9 @@ export const Gallery = (props: GalleryProps) => {
   const [ref, slider] = useCarousel({
     slides: {
       perView: slidesPerView,
-      spacing: useBreakpointValue({ base: 16, md: 24 }),
+      spacing: useBreakpointValue({ base: 16, md: 24 })
     },
-    slideChanged: (slider) => setCurrentSlide(slider.track.details.rel),
+    slideChanged: (slider) => setCurrentSlide(slider.track.details.rel)
   });
 
   return (

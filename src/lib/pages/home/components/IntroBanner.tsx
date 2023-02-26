@@ -1,9 +1,8 @@
-import { Box, Button, Flex, Heading, Img, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Img, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 export const IntroBanner = () => {
   return (
     <Box
-      bg="gray.800"
       as="section"
       minH="140px"
       position="relative"
@@ -51,7 +50,7 @@ export const IntroBanner = () => {
         boxShadow="lg"
         p="2"
         rounded="md"
-        bg="white"
+        bg={useColorModeValue("pink.300", "blue.300")}
         id="image-wrapper"
         position="absolute"
         insetX="0"

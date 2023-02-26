@@ -1,12 +1,4 @@
-import {
-  Box,
-  BoxProps,
-  Flex,
-  FlexProps,
-  IconButton,
-  IconButtonProps,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, BoxProps, Flex, FlexProps, IconButton, IconButtonProps, useColorModeValue } from "@chakra-ui/react";
 import { KeenSliderOptions, useKeenSlider } from "keen-slider/react"; // using version 6.6.10
 import { forwardRef } from "react";
 
@@ -17,7 +9,7 @@ export const Carousel = forwardRef<HTMLDivElement, FlexProps>(function Carousel(
   return (
     <Flex
       boxShadow="lg"
-      p="2"
+      p="4"
       rounded="md"
       bg="rgba(25,25,25,0.15)"
       ref={ref}
@@ -51,7 +43,7 @@ export const CarouselIconButton = (props: IconButtonProps) => (
     color={useColorModeValue("gray.600", "gray.400")}
     _hover={{
       color: useColorModeValue("blue.500", "blue.300"),
-      _disabled: { color: useColorModeValue("gray.600", "gray.400") },
+      _disabled: { color: useColorModeValue("gray.600", "gray.400") }
     }}
     _active={{ color: useColorModeValue("blue.600", "blue.400") }}
     _focus={{ boxShadow: "none" }}
