@@ -41,8 +41,8 @@ export const Featured: React.FC<FeaturedProps> = ({ title, blurb, src, alt, link
         </Text>
       </CardBody>
       <CardFooter>
-        <Link href={link}>
-          <Button color={useColorModeValue("purple.400", "pink")}>
+        <Link href={link} target="_blank">
+          <Button colorScheme="purple">
             Checken
           </Button>
         </Link>
