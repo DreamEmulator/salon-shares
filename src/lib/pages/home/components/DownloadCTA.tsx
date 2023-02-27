@@ -13,7 +13,7 @@ import {
   ModalOverlay,
   Text,
   useColorModeValue,
-  useDisclosure,
+  useDisclosure
 } from "@chakra-ui/react";
 import { FiCloudRain } from "react-icons/fi";
 
@@ -29,13 +29,13 @@ export const DownloadCTA = () => {
           onClick={onOpen}
           rounded="full"
           p="6"
-          color={useColorModeValue("pink.100", "white")}
+          color={useColorModeValue("white.100", "white")}
           backdropFilter="blur(6px)"
           boxShadow="2xl"
           _hover={{
             color: useColorModeValue("gray.500", "white"),
             bg: useColorModeValue("pink.100", "purple.500"),
-            boxShadow: "2xl",
+            boxShadow: "2xl"
           }}
         >
           <Icon as={FiCloudRain} boxSize="16" mx="4" />
@@ -59,7 +59,8 @@ export const DownloadCTA = () => {
             <Button variant="ghost" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Link href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
+            <Link
+              href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
               <Button colorScheme="blue">Let's Do It</Button>
             </Link>
           </ModalFooter>

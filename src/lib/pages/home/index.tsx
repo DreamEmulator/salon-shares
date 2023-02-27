@@ -1,21 +1,24 @@
 import {
+  Box,
   Center,
   Code,
   Divider,
   Flex,
   Grid,
+  Heading,
+  Icon,
   Image,
   Link,
   Stack,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { EmptyTipCards, TipCards } from "./components/TipCards";
 import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
-import { PhotoGallery } from "./components/GalleryWithCarousel/GalleryWithCarousel";
 import { DownloadCTA } from "./components/DownloadCTA";
+import { GrApple, SiGooglephotos } from "react-icons/all";
 
 // @ts-ignore
 const Home = () => (
@@ -45,9 +48,32 @@ const Home = () => (
     <IntroBanner />
     <SharingIsCaringBanner />
     <EmptyTipCards />
-    <TitleText title={"Foto's"} />
-    <PhotoGallery />
-    <DownloadCTA />
+    <Box
+      p="24"
+      boxShadow="lg"
+      rounded="xl"
+      bg={useColorModeValue("pink.300", "blue.300")}
+      overflow="hidden"
+      bgGradient="linear(to-r,  yellow.400, pink.200)"
+    >
+      <Heading color="white" textAlign="center" as="h1" size="4xl" mb="12">Foto's</Heading>
+      {/*<PhotoGallery />*/}
+      <Center mb="12">
+        <Link href="https://www.icloud.com/sharedalbum/#B0XGzFCC1GJrTWn" target="_blank">
+          <Stack mx="12">
+            <Icon as={GrApple} boxSize={24} />
+            <Text>Apple Photo's</Text>
+          </Stack>
+        </Link>
+        <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank">
+          <Stack>
+            <Icon as={SiGooglephotos} boxSize={24} />
+            <Text>Google Photo's</Text>
+          </Stack>
+        </Link>
+      </Center>
+      <DownloadCTA />
+    </Box>
     <Stack>
       <TitleText title={"Muziek"} />
       <Flex
