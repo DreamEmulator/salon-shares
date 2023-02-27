@@ -1,23 +1,10 @@
-import {
-  Center,
-  Code,
-  Divider,
-  Flex,
-  Grid,
-  HStack,
-  Icon,
-  Image,
-  Link,
-  Stack,
-  Text,
-  useColorModeValue
-} from "@chakra-ui/react";
+import { Center, Code, Divider, Flex, Grid, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { EmptyTipCards, TipCards } from "./components/TipCards";
-import { FiCloudRain, FiPlusCircle } from "react-icons/fi";
 import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
 import { PhotoGallery } from "./components/GalleryWithCarousel/GalleryWithCarousel";
+import { DownloadCTA } from "./components/DownloadCTA";
 
 // @ts-ignore
 const Home = () => (
@@ -46,21 +33,7 @@ const Home = () => (
     <EmptyTipCards />
     <TitleText title={"Foto's"} />
     <PhotoGallery />
-    {/* DOWNLOAD CTA*/}
-    <Flex justify="space-around" my="12">
-      <HStack>
-        <Icon as={FiPlusCircle} />
-        <Text fontSize="md" fontWeight="medium">
-          Rechter klik op foto om eentje te downloaden
-        </Text>
-      </HStack>
-      <HStack>
-        <Icon as={FiCloudRain} />
-        <Text fontSize="md" fontWeight="medium">
-          Hier om alles in een keer te hebben
-        </Text>
-      </HStack>
-    </Flex>
+    <DownloadCTA />
     <Stack>
       <TitleText title={"Muziek"} />
       <Flex

@@ -22,11 +22,13 @@ interface GalleryProps {
 }
 
 export const Gallery = (props: GalleryProps) => {
-  const { images, aspectRatio = 4 / 3, rootProps } = props;
+  const { images, aspectRatio = 3 / 4, rootProps } = props;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [ref, slider] = useCarousel({
-    slideChanged: (slider) => setCurrentSlide(slider.track.details.rel)
+    slideChanged: (slider) => setCurrentSlide(slider.track.details.rel),
+    mode: "free-snap",
+    renderMode: "performance"
   });
 
   const hasPrevious = currentSlide !== 0;
@@ -49,10 +51,11 @@ export const Gallery = (props: GalleryProps) => {
             <CarouselSlide key={i}>
               <AspectRatio
                 ratio={aspectRatio}
-                opacity={currentSlide === i ? 1 : 0.4}
                 _hover={{ opacity: 1 }}
               >
-                <Image src={image.src} objectFit="contain" alt={image.alt} fallback={<Skeleton />} loading="lazy" />
+                <Image src={image.src} objectFit="contain" alt={image.alt}
+                       display={currentSlide == i || currentSlide == i - 1 || currentSlide == i + 1 ? "block" : "none"}
+                       fallback={<Skeleton />} loading="lazy" />
               </AspectRatio>
             </CarouselSlide>
           ))}
@@ -92,12 +95,14 @@ const CarouselIconButton = (props: IconButtonProps) => (
     fontSize="lg"
     isRound
     boxShadow="base"
-    bg={useColorModeValue("pink.200", "purple.400")}
+    opacity="0.8"
+    bg={useColorModeValue("teal.200", "purple.400")}
     _hover={{
-      bg: useColorModeValue("gray.100", "pink.700")
+      opacity: 0.95,
+      bg: useColorModeValue("teal.100", "purple.600")
     }}
     _active={{
-      bg: useColorModeValue("gray.200", "pink.600")
+      bg: useColorModeValue("teal.50", "purple.800")
     }}
     _focus={{ boxShadow: "inerhit" }}
     _focusVisible={{ boxShadow: "outline" }}
