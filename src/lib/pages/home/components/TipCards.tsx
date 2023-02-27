@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import { AiOutlineCoffee, FiBook, FiShare2 } from "react-icons/all";
+import { AiOutlineCoffee, BiCamera, FiBook, FiShare2 } from "react-icons/all";
 
 interface TestimonialProps {
   logo: ReactNode;
@@ -147,10 +147,10 @@ const Testimonial = (props: TestimonialProps) => {
             objectFit="cover"
           />
           <Box position="relative" fontSize="sm" mt="3" textAlign="center">
-            <Text as="h3" fontWeight="bold" fontSize="md">
+            <Text as="h3" fontWeight="bold" fontSize={[16, 18, 20]}>
               {author}
             </Text>
-            <Text>{role}</Text>
+            <Text fontSize={[16, 18, 20]}>{role}</Text>
           </Box>
         </Flex>
       </Link>
@@ -205,7 +205,7 @@ export const TipCards = () => {
             role="Voor Loes"
             colorScheme="orange"
             link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
-            image="https://mf.b37mrtl.ru/rbthmedia/images/2021.05/original/60b50d1615e9f96e404dff9b.jpg"
+            image="https://preview.redd.it/what-do-you-think-of-this-5th-century-bc-scythian-deer-v0-mbpivqjrx8v81.jpg?auto=webp&s=55fc5f47dd01b7668009c6416504e5024100ed29"
           >
             Scythian Ice Princess is een ongelofelijke dame met een hele
             bijzondere tatoeage.
@@ -216,11 +216,10 @@ export const TipCards = () => {
             role="Voor Katie"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
-            image="https://sebastiaan-hols.com/images/1654380598A0FFBA21-2203-4125-BEE9-C55230815291.jpeg"
+            image="https://www.littlebrown.com/wp-content/uploads/2022/08/DavidFosterWallace_INFINITEJEST-4.jpg?fit=3123%2C2054"
           >
-            David Foster Wallace drukt in simpel, diep en grappig taalgebruik
-            uit wat the "Liberal Arts Education" betekend in real world everyday
-            value.
+            David Foster Wallace drukt in simpel, diep en grappig uitlegd
+            uit wat the Liberal Arts Education echt kan brengen.
           </Testimonial>
           <Testimonial
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
@@ -232,6 +231,17 @@ export const TipCards = () => {
           >
             Cafe Willemsbrug.
             De echtste plek in Rotterdam voor een bakkie en een goed gesprek.
+          </Testimonial>
+          <Testimonial
+            logo={<Icon as={BiCamera} boxSize={6} />}
+            author="Fotomuseum App"
+            role="Voor Hester"
+            colorScheme="red"
+            link="https://www.nederlandsfotomuseum.nl/eregalerij-app/"
+            image="https://eregalerij.nederlandsfotomuseum.nl/build/img/home.jpg"
+          >
+            De Eregalerij is een hele gave plek om te leren kijken naar fotografie.
+            De app zit ook vol mooie animaties van Bas. Dus zeker checken 😇
           </Testimonial>
         </SimpleGrid>
       </Box>

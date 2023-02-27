@@ -18,7 +18,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import { FiCloudRain } from "react-icons/fi";
-import { GrApple, SiGooglephotos } from "react-icons/all";
+import { IoFlowerOutline, SiGooglephotos } from "react-icons/all";
 
 {
   /* DOWNLOAD CTA*/
@@ -51,8 +51,8 @@ export const DownloadCTA = () => {
               boxShadow: "2xl"
             }}
           >
-            <Icon as={GrApple} boxSize={[16, 20, 24]} />
-            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">Apple Photo's</Text>
+            <Icon as={IoFlowerOutline} boxSize={[16, 20, 24]} />
+            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">Apple</Text>
           </Stack>
         </Link>
         <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank" color="white">
@@ -71,7 +71,7 @@ export const DownloadCTA = () => {
               boxShadow: "2xl"
             }}>
             <Icon as={SiGooglephotos} boxSize={[16, 20, 24]} />
-            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">Google Photo's</Text>
+            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">Google</Text>
           </Stack>
         </Link>
       </Stack>
