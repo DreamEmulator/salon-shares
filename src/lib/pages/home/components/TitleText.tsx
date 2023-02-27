@@ -12,7 +12,7 @@ export const TitleText: React.FC<TitleTextProps> = ({ title }) => (
     alignItems="flex-start"
     backdropFilter="blur(6px)"
     bgGradient={useColorModeValue(
-      `linear(90deg,  #FFF, #0F0)`,
+      `linear(90deg,  #FFF, #F00)`,
       "linear(-150deg,  #F0F, #FF0)"
     )}
     bgClip="text"

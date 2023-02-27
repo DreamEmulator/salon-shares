@@ -57,18 +57,44 @@ const Home = () => (
       overflow="hidden"
       bgGradient="linear(to-r,  yellow.400, pink.200)"
     >
-      <Heading color="white" textAlign="center" as="h1" size="4xl" mb="12">Foto's</Heading>
+      <Heading
+        color="white"
+        textAlign="center"
+        as="h1"
+        size={{ sm: "3xl", md: "4xl", lg: "4xl" }}
+        mb="16">Foto's</Heading>
       {/*<PhotoGallery />*/}
       <Center mb="12">
-        <Link href="https://www.icloud.com/sharedalbum/#B0XGzFCC1GJrTWn" target="_blank">
-          <Stack mx="12" justifyContent="center">
-            <Icon as={GrApple} boxSize={24} />
+        <Link href="https://www.icloud.com/sharedalbum/#B0XGzFCC1GJrTWn" target="_blank" color="white">
+          <Stack mx="12" alignItems="center"
+                 rounded="full"
+                 p="6"
+                 color={useColorModeValue("white.100", "white")}
+                 backdropFilter="blur(6px)"
+                 boxShadow="2xl"
+                 _hover={{
+                   color: useColorModeValue("gray.500", "white"),
+                   bg: useColorModeValue("pink.100", "purple.500"),
+                   boxShadow: "2xl"
+                 }}
+          >
+            <Icon as={GrApple} boxSize={{ sm: 16, md: 20, lg: 24 }} />
             <Text textAlign="center">Apple Photo's</Text>
           </Stack>
         </Link>
-        <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank">
-          <Stack mx="12" justifyContent="center">
-            <Icon as={SiGooglephotos} boxSize={24} />
+        <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank" color="white">
+          <Stack mx="12" alignItems="center"
+                 rounded="full"
+                 p="6"
+                 color={useColorModeValue("white.100", "white")}
+                 backdropFilter="blur(6px)"
+                 boxShadow="2xl"
+                 _hover={{
+                   color: useColorModeValue("gray.500", "white"),
+                   bg: useColorModeValue("pink.100", "purple.500"),
+                   boxShadow: "2xl"
+                 }}>
+            <Icon as={SiGooglephotos} boxSize={{ sm: 16, md: 20, lg: 24 }} />
             <Text textAlign="center">Google Photo's</Text>
           </Stack>
         </Link>

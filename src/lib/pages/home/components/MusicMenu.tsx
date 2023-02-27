@@ -6,7 +6,7 @@ export const MusicMenu = () => (<Flex width="xl">
       <MenuButton as={Button} rightIcon={<BiChevronDown />}>
         Music
       </MenuButton>
-      <MenuList minW="xl" p="4" zIndex="1000">
+      <MenuList w={{ sm: "sm", md: "lg", lg: "lg" }} p="4" zIndex="1000">
         <Box borderRadius="16" overflow="hidden">
           <iframe
             src="https://open.spotify.com/embed/playlist/4W5hrvWXV4eCD9TPPshuuA?utm_source=generator&theme=0"

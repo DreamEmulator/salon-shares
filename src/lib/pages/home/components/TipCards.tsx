@@ -201,33 +201,31 @@ export const TipCards = () => {
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing="10">
           <Testimonial
             logo={<Icon as={FiBook} boxSize={6} />}
-            author="Voor Loes"
-            role="Van Bas"
+            author="The Scythian Princess"
+            role="Voor Loes"
             colorScheme="orange"
             link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
             image="https://mf.b37mrtl.ru/rbthmedia/images/2021.05/original/60b50d1615e9f96e404dff9b.jpg"
           >
             Scythian Ice Princess is een ongelofelijke dame met een hele
-            bijzondere tatoeage. Zij was een vooraanstaand lid van een
-            beschaving die wij totaal niet begrijpen.
+            bijzondere tatoeage.
           </Testimonial>
           <Testimonial
             logo={<Icon as={FiShare2} boxSize={6} />}
-            author="Voor Katey"
-            role="Van Bas"
+            author="This is Water"
+            role="Voor Katie"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
             image="https://sebastiaan-hols.com/images/1654380598A0FFBA21-2203-4125-BEE9-C55230815291.jpeg"
           >
             David Foster Wallace drukt in simpel, diep en grappig taalgebruik
             uit wat the "Liberal Arts Education" betekend in real world everyday
-            value. Dit is een goeie om afentoe te relativeren over je keuzes en
-            motivaties.
+            value.
           </Testimonial>
           <Testimonial
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
-            author="Voor Kate"
-            role="Van Bas"
+            author="Café Willemsbrug"
+            role="Voor Kate"
             colorScheme="pink"
             link="https://goo.gl/maps/9QaoHR8XXVmjVn2d9"
             image="https://sebastiaan-hols.com/img/frontend/thumbs/das_boot_thumb.png"

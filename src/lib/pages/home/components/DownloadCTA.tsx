@@ -38,7 +38,7 @@ export const DownloadCTA = () => {
             boxShadow: "2xl"
           }}
         >
-          <Icon as={FiCloudRain} boxSize="16" mx="4" />
+          <Icon as={FiCloudRain} boxSize="16" mx="4" color="white" />
           <Text fontSize="xl" fontWeight="medium">
             Klik hier om alles in een keer te downloaden
           </Text>
