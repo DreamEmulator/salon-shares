@@ -209,14 +209,15 @@ export const TipCards = () => {
           </Testimonial>
           <Testimonial
             logo={<Icon as={FiShare2} boxSize={6} />}
-            author="Van Sebas"
-            role="Voor Katey"
+            author="Voor Katey"
+            role="Van Sebas"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
             image="https://sebastiaan-hols.com/images/1654380598A0FFBA21-2203-4125-BEE9-C55230815291.jpeg"
           >
             David Foster Wallace drukt in simpel, diep en grappig taalgebruik uit wat the "Liberal Arts Education"
             betekend in real world everyday value.
+            Dit is een goeie om afentoe te relativeren over je keuzes en motivaties.
           </Testimonial>
         </SimpleGrid>
       </Box>

@@ -11,14 +11,30 @@ export const images = [
   }
 ];
 
-
-interface GalleryImage {
+export interface GalleryImage {
   id: string,
   src: string,
   alt: string
 }
 
-export const getImages = (from: number, till: number) => {
+export interface GetAssetsProps {
+  from: number,
+  till: number
+}
+
+export const getThumbnails = ({ from, till }: GetAssetsProps) => {
+  let images: GalleryImage[] = [];
+  for (let i = from; i < till; i++) {
+    images.push({
+      id: `id_${i}`,
+      src: `https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Thumbnails/Salon+de+Bon+Bon+%231+🔮+-+Foto+${i}+van+142.jpeg`,
+      alt: `${i}'de foto van de magische avond 🔮`
+    });
+  }
+  return images;
+};
+
+export const getImages = ({ from, till }: GetAssetsProps) => {
   let images: GalleryImage[] = [];
   for (let i = from; i < till; i++) {
     images.push({
