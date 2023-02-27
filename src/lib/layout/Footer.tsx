@@ -10,7 +10,7 @@ const Footer = () => {
       justifyContent="center"
     >
       <Text color="pink" fontSize="l" fontWeight="bold">
-        <Link href="sebastiaan-hols.com" isExternal>
+        <Link href="https://sebastiaan-hols.com" isExternal>
           sebastiaan-hols.com
         </Link>
       </Text>

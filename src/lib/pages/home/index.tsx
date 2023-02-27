@@ -40,7 +40,7 @@ const Home = () => (
     >
       Salon de Bon Bon #1
       <Center>
-        <Code> 25.02.23 - St. Jobs-Kade - Rotterdam </Code>
+        <Code> 25.02.23 - Sint-Jobskade - Rotterdam </Code>
       </Center>
     </Text>
 
