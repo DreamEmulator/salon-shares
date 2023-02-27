@@ -63,7 +63,7 @@ export const IntroBanner = () => {
       >
         <Box position="relative" w="full" h="full">
           <Img
-            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/HOLS0749.JPG"
+            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮+-+Foto+103+van+142.jpeg"
             alt="Main Image"
             w="full"
             h="full"

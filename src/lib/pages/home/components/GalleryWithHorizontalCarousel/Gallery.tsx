@@ -57,6 +57,7 @@ export const Gallery = (props: GalleryProps) => {
                   objectFit="cover"
                   alt={image.alt}
                   fallback={<Skeleton />}
+                  loading="lazy"
                 />
               </AspectRatio>
             </CarouselSlide>

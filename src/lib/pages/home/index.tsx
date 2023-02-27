@@ -1,9 +1,10 @@
 import { Center, Code, Divider, Flex, Grid, HStack, Icon, Image, Link, Stack, Text } from "@chakra-ui/react";
-import { Testimonials } from "./components/Testimonial";
+import { EmptyTipCards, TipCards } from "./components/TipCards";
 import { PhotoGallery } from "./components/GalleryWithHorizontalCarousel/App";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
 import { FiCloudRain, FiPlusCircle } from "react-icons/fi";
+import { TitleText } from "./components/TitleText";
 
 // @ts-ignore
 const Home = () => (
@@ -18,21 +19,12 @@ const Home = () => (
       Salon de Bon Bon #1
     </Text>
     <Center>
-      <Code>25.02.23 - St. Jobs-Kade - Rotterdam</Code>
+      <Code> 25.02.23 - St. Jobs-Kade - Rotterdam </Code>
     </Center>
     <IntroBanner />
     <SharingIsCaringBanner />
-    <Testimonials />
-    <Text
-      mt="4"
-      bgGradient="linear(-150deg,  #F0F, #FF0)"
-      bgClip="text"
-      fontSize="6xl"
-      fontWeight="extrabold"
-      align="center"
-    >
-      Foto's
-    </Text>
+    <EmptyTipCards />
+    <TitleText title={"Foto's"} />
     <PhotoGallery />
     {/* DOWNLOAD CTA*/}
     <Flex justify="space-around" my="12">
@@ -50,16 +42,7 @@ const Home = () => (
       </HStack>
     </Flex>
     <Stack>
-      <Text
-        mt="4"
-        bgGradient="linear(-150deg,  #F0F, #FF0)"
-        bgClip="text"
-        fontSize="6xl"
-        fontWeight="extrabold"
-        align="center"
-      >
-        Muziek + Foto's
-      </Text>
+      <TitleText title={"Muziek"} />
       <Flex
         minH="xl"
         borderRadius="xl"
@@ -88,6 +71,8 @@ const Home = () => (
         />
       </Link>
     </Center>
+    <TitleText title={"Tips"} />
+    <TipCards />
   </Grid>
 );
 

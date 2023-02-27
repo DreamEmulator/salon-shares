@@ -1,4 +1,14 @@
-import { Box, Flex, Icon, Img, SimpleGrid, Text, useColorModeValue as mode, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Icon,
+  Img,
+  Link,
+  SimpleGrid,
+  Text,
+  useColorModeValue as mode,
+  useColorModeValue
+} from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { FiBook, FiShare2 } from "react-icons/all";
@@ -8,12 +18,13 @@ interface TestimonialProps {
   author: string;
   role: string;
   image: string;
+  link?: string;
   colorScheme: string;
   children: ReactNode;
 }
 
 const Testimonial = (props: TestimonialProps) => {
-  const { logo, children, image, author, role, colorScheme: c } = props;
+  const { logo, children, image, author, role, colorScheme: c, link } = props;
   const accentColor = mode(`${c}.200`, `${c}.400`);
   const backgrounds = [
     `url("data:image/svg+xml, %3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'560\' height=\'185\' viewBox=\'0 0 560 185\' fill=\'none\'%3E%3Cellipse cx=\'102.633\' cy=\'61.0737\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23ED64A6\' /%3E%3Cellipse cx=\'399.573\' cy=\'123.926\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23F56565\' /%3E%3Cellipse cx=\'366.192\' cy=\'73.2292\' rx=\'193.808\' ry=\'73.2292\' fill=\'%2338B2AC\' /%3E%3Cellipse cx=\'222.705\' cy=\'110.585\' rx=\'193.808\' ry=\'73.2292\' fill=\'%23ED8936\' /%3E%3C/svg%3E")`,
@@ -53,97 +64,100 @@ const Testimonial = (props: TestimonialProps) => {
       direction="column"
       rounded={{ md: "lg" }}
     >
-      <Flex
-        direction="column"
-        position="relative"
-        mb="4"
-        textAlign="center"
-        justify="center"
-        align="center"
-        pt="10"
-        pb="6"
-        px="10"
-      >
-        <Box mb="2">{logo}</Box>
-        <Box as="blockquote" maxW="340px" mx="auto" my="4">
-          <Box
-            position="absolute"
-            top="6"
-            left="5"
-            display={{ base: "none", md: "inline" }}
-            fontSize="3xl"
-            color={accentColor}
-            opacity={0.2}
-          >
-            <ImQuotesLeft />
-          </Box>
-          <Text fontSize="lg">{children}</Text>
-          <Box
-            position="absolute"
-            bottom="-2"
-            right="5"
-            display={{ base: "none", md: "inline" }}
-            fontSize="3xl"
-            color={accentColor}
-            opacity={0.2}
-          >
-            <ImQuotesRight />
-          </Box>
-        </Box>
-      </Flex>
-      <Flex
-        direction="column"
-        position="relative"
-        align="center"
-        justify="center"
-        color="white"
-        px="6"
-        pb="8"
-      >
-        <Box
-          position="absolute"
-          left="0"
-          bottom="0"
-          w="full"
-          h="full"
-          roundedBottom={{ md: "lg" }}
-          overflow="hidden"
-          _before={{
-            content: `''`,
-            display: "block",
-            position: "absolute",
-            bottom: "0",
-            left: "-10%",
-            width: "120%",
-            height: "90%",
-            roundedTop: "120%",
-            bg: accentColor
-          }}
-        />
-        <Img
-          src={image}
-          alt={author}
-          rounded="full"
-          border="6px solid"
-          borderColor={accentColor}
+      <Link href={link}
+            target="_blank">
+        <Flex
+          direction="column"
           position="relative"
-          mt="-5"
-          w="16"
-          h="16"
-          objectFit="cover"
-        />
-        <Box position="relative" fontSize="sm" mt="3" textAlign="center">
-          <Text as="h3" fontWeight="bold" fontSize="md">
-            {author}
-          </Text>
-          <Text>{role}</Text>
-        </Box>
-      </Flex>
+          mb="4"
+          textAlign="center"
+          justify="center"
+          align="center"
+          pt="10"
+          pb="6"
+          px="10"
+        >
+          <Box mb="2">{logo}</Box>
+          <Box as="blockquote" maxW="340px" mx="auto" my="4">
+            <Box
+              position="absolute"
+              top="6"
+              left="5"
+              display={{ base: "none", md: "inline" }}
+              fontSize="3xl"
+              color={accentColor}
+              opacity={0.2}
+            >
+              <ImQuotesLeft />
+            </Box>
+            <Text fontSize="lg">{children}</Text>
+            <Box
+              position="absolute"
+              bottom="-2"
+              right="5"
+              display={{ base: "none", md: "inline" }}
+              fontSize="3xl"
+              color={accentColor}
+              opacity={0.2}
+            >
+              <ImQuotesRight />
+            </Box>
+          </Box>
+        </Flex>
+        <Flex
+          direction="column"
+          position="relative"
+          align="center"
+          justify="center"
+          color="white"
+          px="6"
+          pb="8"
+        >
+          <Box
+            position="absolute"
+            left="0"
+            bottom="0"
+            w="full"
+            h="full"
+            roundedBottom={{ md: "lg" }}
+            overflow="hidden"
+            _before={{
+              content: `''`,
+              display: "block",
+              position: "absolute",
+              bottom: "0",
+              left: "-10%",
+              width: "120%",
+              height: "90%",
+              roundedTop: "120%",
+              bg: accentColor
+            }}
+          />
+          <Img
+            src={image}
+            alt={author}
+            rounded="full"
+            border="6px solid"
+            borderColor={accentColor}
+            position="relative"
+            mt="-5"
+            w="16"
+            h="16"
+            objectFit="cover"
+          />
+          <Box position="relative" fontSize="sm" mt="3" textAlign="center">
+            <Text as="h3" fontWeight="bold" fontSize="md">
+              {author}
+            </Text>
+            <Text>{role}</Text>
+          </Box>
+        </Flex>
+      </Link>
     </Flex>
   );
 };
 
-export const Testimonials = () => {
+export const EmptyTipCards = () => {
   return (
     <Box as="section" py="12" p="6" rounded="md">
       <Box maxW={{ base: "xl", md: "6xl" }} mx="auto" px={{ md: "8" }}>
@@ -168,6 +182,41 @@ export const Testimonials = () => {
           >
             Een Scythian Princess voor Loes, This is Water voor Katey.
             Goethe's Theory of Colors voor mijn camera koningin.
+          </Testimonial>
+        </SimpleGrid>
+      </Box>
+    </Box>
+  );
+};
+
+// TIPS:
+export const TipCards = () => {
+  return (
+    <Box as="section" py="12" p="6" rounded="md">
+      <Box maxW={{ base: "xl", md: "6xl" }} mx="auto" px={{ md: "8" }}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="10">
+          <Testimonial
+            logo={<Icon as={FiBook} boxSize={6} />}
+            author="Voor Loes"
+            role="Van Sebas"
+            colorScheme="orange"
+            link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
+            image="https://mf.b37mrtl.ru/rbthmedia/images/2021.05/original/60b50d1615e9f96e404dff9b.jpg"
+          >
+            Scythian Ice Princess is een ongelofelijke dame met een hele bijzondere tatoeage. Zij was een
+            vooraanstaand
+            lid van een beschaving die wij totaal niet begrijpen.
+          </Testimonial>
+          <Testimonial
+            logo={<Icon as={FiShare2} boxSize={6} />}
+            author="Van Sebas"
+            role="Voor Katey"
+            colorScheme="pink"
+            link="https://youtu.be/ms2BvRbjOYo"
+            image="https://sebastiaan-hols.com/images/1654380598A0FFBA21-2203-4125-BEE9-C55230815291.jpeg"
+          >
+            David Foster Wallace drukt in simpel, diep en grappig taalgebruik uit wat the "Liberal Arts Education"
+            betekend in real world everyday value.
           </Testimonial>
         </SimpleGrid>
       </Box>

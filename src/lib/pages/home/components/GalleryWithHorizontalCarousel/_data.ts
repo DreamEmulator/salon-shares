@@ -2,14 +2,34 @@ export const images = [
   {
     id: "01",
     src: "https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/HOLS0743.JPG",
-    alt: "Kate",
+    alt: "Kate"
   },
   {
     id: "02",
     src: "https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/HOLS0656.JPG",
-    alt: "Kate",
-  },
+    alt: "Kate"
+  }
 ];
+
+
+interface GalleryImage {
+  id: string,
+  src: string,
+  alt: string
+}
+
+export const getImages = (from: number, till: number) => {
+  let images: GalleryImage[] = [];
+  for (let i = from; i < till; i++) {
+    images.push({
+      id: `id_${i}`,
+      src: `https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮+-+Foto+${i}+van+142.jpeg`,
+      alt: `${i}'de foto van de magische avond 🔮`
+    });
+  }
+  return images;
+};
+
 export const products = [
   {
     id: "1",
@@ -23,7 +43,7 @@ export const products = [
     ratingCount: 1,
     description:
       "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
-    images,
+    images
   },
   {
     id: "2",
@@ -38,7 +58,7 @@ export const products = [
     ratingCount: 12,
     description:
       "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
-    images,
+    images
   },
   {
     id: "3",
@@ -51,7 +71,7 @@ export const products = [
     ratingCount: 12,
     description:
       "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
-    images,
+    images
   },
   {
     id: "4",
@@ -64,8 +84,8 @@ export const products = [
     ratingCount: 1,
     description:
       "With a sleek design and a captivating essence, this is a modern Classic made for every occasion.",
-    images,
-  },
+    images
+  }
 ];
 
 export type ElementType<T extends ReadonlyArray<unknown>> =
