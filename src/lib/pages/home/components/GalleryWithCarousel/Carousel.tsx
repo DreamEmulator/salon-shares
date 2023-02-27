@@ -2,19 +2,13 @@ import { Box, BoxProps, Flex, FlexProps, IconButton, IconButtonProps, useColorMo
 import { KeenSliderOptions, useKeenSlider } from "keen-slider/react"; // using version 6.6.10
 import { forwardRef } from "react";
 
-export const Carousel = forwardRef<HTMLDivElement, FlexProps>(function Carousel(
-  props,
-  ref
-) {
+export const Carousel = forwardRef<HTMLDivElement, FlexProps>(function Carousel(props, ref) {
   return (
     <Flex
-      boxShadow="lg"
-      p="4"
-      rounded="md"
-      bg="rgba(25,25,25,0.15)"
       ref={ref}
       className="chakra-carousel"
       overflow="hidden"
+      rounded="2xl"
       position="relative"
       userSelect="none"
       {...props}
@@ -27,8 +21,8 @@ export const CarouselSlide = (props: BoxProps) => (
     className="chakra-carousel__slide"
     position="relative"
     overflow="hidden"
-    width="100%"
-    minH="100%"
+    maxWidth="xl"
+    objectFit="contain"
     {...props}
   />
 );

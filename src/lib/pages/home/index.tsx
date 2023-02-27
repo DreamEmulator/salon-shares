@@ -1,26 +1,46 @@
-import { Center, Code, Divider, Flex, Grid, HStack, Icon, Image, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Center,
+  Code,
+  Divider,
+  Flex,
+  Grid,
+  HStack,
+  Icon,
+  Image,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue
+} from "@chakra-ui/react";
 import { EmptyTipCards, TipCards } from "./components/TipCards";
-import { PhotoGallery } from "./components/GalleryWithHorizontalCarousel/App";
-import { IntroBanner } from "./components/IntroBanner";
-import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
 import { FiCloudRain, FiPlusCircle } from "react-icons/fi";
 import { TitleText } from "./components/TitleText";
+import { IntroBanner } from "./components/IntroBanner";
+import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
+import { PhotoGallery } from "./components/GalleryWithCarousel/GalleryWithCarousel";
 
 // @ts-ignore
 const Home = () => (
   <Grid gap={6}>
     <Text
-      mt="4"
+      my="16"
       bgGradient="linear(to-l, #7928CA, #f98787)"
       bgClip="text"
       fontSize="7xl"
+      px="8"
+      py="8"
       fontWeight="extrabold"
+      boxShadow={useColorModeValue("0px 0px 0px 20px rgba(255,0,125,0.1)", "0px 0px 0px 2px rgba(240,240,240,0.2)")}
+      textAlign="center"
+      rounded="full"
+      backdropFilter="blur(1px) saturate(80%) brightness(110%) opacity(0.10)"
     >
       Salon de Bon Bon #1
+      <Center>
+        <Code> 25.02.23 - St. Jobs-Kade - Rotterdam </Code>
+      </Center>
     </Text>
-    <Center>
-      <Code> 25.02.23 - St. Jobs-Kade - Rotterdam </Code>
-    </Center>
+
     <IntroBanner />
     <SharingIsCaringBanner />
     <EmptyTipCards />

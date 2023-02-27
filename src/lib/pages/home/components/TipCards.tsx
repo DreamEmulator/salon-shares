@@ -34,8 +34,10 @@ const Testimonial = (props: TestimonialProps) => {
   ];
   return (
     <Flex
+      rounded="xl"
+      overflow="hidden"
       boxShadow="xl"
-      bg={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue("green.50", "purple.500")}
       _after={{
         content: "\"\"",
         position: "absolute",
@@ -62,7 +64,6 @@ const Testimonial = (props: TestimonialProps) => {
         backgroundImage: backgrounds[Math.floor(Math.random() * 4)]
       }}
       direction="column"
-      rounded={{ md: "lg" }}
     >
       <Link href={link}
             target="_blank">
