@@ -13,21 +13,29 @@ import {
   ModalOverlay,
   Text,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import { FiCloudRain } from "react-icons/fi";
 
-{/* DOWNLOAD CTA*/
+{
+  /* DOWNLOAD CTA*/
 }
 export const DownloadCTA = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Flex justify="space-around" backdropFilter="blur(5px)">
+      <Flex justify="space-around" cursor="pointer">
         <HStack
           onClick={onOpen}
+          rounded="full"
+          p="6"
+          color={useColorModeValue("pink.100", "white")}
+          backdropFilter="blur(6px)"
+          boxShadow="2xl"
           _hover={{
-            color: useColorModeValue("pink.500", "green.300")
+            color: useColorModeValue("gray.500", "white"),
+            bg: useColorModeValue("pink.100", "purple.500"),
+            boxShadow: "2xl",
           }}
         >
           <Icon as={FiCloudRain} boxSize="16" mx="4" />
@@ -43,21 +51,15 @@ export const DownloadCTA = () => {
         motionPreset="slideInBottom"
       >
         <ModalOverlay />
-        <ModalContent
-          rounded="12"
-          p="6"
-        >
+        <ModalContent rounded="12" p="6">
           <ModalHeader>Foto's Downloaden</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            Klaar om 453.7 MB te downloaden?
-          </ModalBody>
+          <ModalBody>Klaar om 453.7 MB te downloaden?</ModalBody>
           <ModalFooter>
             <Button variant="ghost" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Link
-              href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
+            <Link href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
               <Button colorScheme="blue">Let's Do It</Button>
             </Link>
           </ModalFooter>

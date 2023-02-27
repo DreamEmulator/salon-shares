@@ -1,4 +1,15 @@
-import { Center, Code, Divider, Flex, Grid, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Center,
+  Code,
+  Divider,
+  Flex,
+  Grid,
+  Image,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { EmptyTipCards, TipCards } from "./components/TipCards";
 import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
@@ -17,7 +28,10 @@ const Home = () => (
       px="8"
       py="8"
       fontWeight="extrabold"
-      boxShadow={useColorModeValue("0px 0px 0px 20px rgba(255,0,125,0.1)", "0px 0px 0px 2px rgba(240,240,240,0.2)")}
+      boxShadow={useColorModeValue(
+        "0px 0px 0px 20px rgba(255,0,125,0.1)",
+        "0px 0px 0px 2px rgba(240,240,240,0.2)"
+      )}
       textAlign="center"
       rounded="full"
       backdropFilter="blur(1px) saturate(80%) brightness(110%) opacity(0.10)"
@@ -41,16 +55,24 @@ const Home = () => (
         borderRadius="xl"
         overflow="hidden"
         justifyContent="center"
-        p="4" bg="purple.50"
+        p="4"
+        bg="purple.50"
         boxShadow="lg"
         bgGradient="linear(to-r, gray.300, yellow.400, pink.200)"
       >
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tv56iyECa-Y?rel=0&amp;showinfo=0"
-                frameBorder="0" allow="autoplay; encrypted-media"></iframe>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/tv56iyECa-Y?rel=0&amp;showinfo=0"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+        ></iframe>
       </Flex>
     </Stack>
     <Divider my="xl" />
-    <Center>
+    <TitleText title={"Tips"} />
+    <TipCards />
+    <Center mt="24">
       <Link href="https://dream-emulator.com">
         <Image
           maxHeight="200px"
@@ -64,10 +86,7 @@ const Home = () => (
         />
       </Link>
     </Center>
-    <TitleText title={"Tips"} />
-    <TipCards />
   </Grid>
 );
-
 
 export default Home;
