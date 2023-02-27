@@ -56,7 +56,7 @@ const Home = () => (
     <SimpleGrid gap="8">
       <TitleText title="Featured" />
       <Featured title={"Ik ben mijn Muze"}
-                blurb={"Loes stapt in een lange lijn pittige tantes en publiceert gewoon even een boek. Verrijk je kijk op de de kunstgeschiedenis en leer over deze ongelofelijke vrouwen."}
+                blurb={"Loes stapt in een lange lijn pittige tantes en publiceert gewoon even een boek. Verrijk je kijk op de kunstgeschiedenis en leer over deze ongelofelijke vrouwen."}
                 src={"https://media.s-bol.com/j53vx2o48zOB/z6vk4A8/843x1200.jpg"}
                 alt={"Ik ben mijn Muze door Loes Faber"} />
       <Featured title={"Kaetes"}
