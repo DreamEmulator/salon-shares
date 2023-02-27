@@ -60,15 +60,15 @@ const Home = () => (
       {/*<PhotoGallery />*/}
       <Center mb="12">
         <Link href="https://www.icloud.com/sharedalbum/#B0XGzFCC1GJrTWn" target="_blank">
-          <Stack mx="12">
+          <Stack mx="12" justifyContent="center">
             <Icon as={GrApple} boxSize={24} />
-            <Text>Apple Photo's</Text>
+            <Text textAlign="center">Apple Photo's</Text>
           </Stack>
         </Link>
         <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank">
-          <Stack>
+          <Stack mx="12" justifyContent="center">
             <Icon as={SiGooglephotos} boxSize={24} />
-            <Text>Google Photo's</Text>
+            <Text textAlign="center">Google Photo's</Text>
           </Stack>
         </Link>
       </Center>
