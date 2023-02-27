@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
 
 export const SharingIsCaringBanner = () => (<Box bg="bg-surface">
     <Container py={{ base: "16", md: "24" }}>
@@ -21,14 +21,16 @@ export const SharingIsCaringBanner = () => (<Box bg="bg-surface">
             Dan kunnen we daar altijd weer inspiratie uit putten 😃
           </Text>
         </Stack>
-        <Image
-          rounded="8"
-          overflow="hidden"
-          width="full"
-          height={{ base: "auto", md: "sm" }}
-          objectFit="cover"
-          src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/let's_connect_on_telegram.jpeg"
-        />
+        <Link href="https://t.me/dream_emulator" target="_blank">
+          <Image
+            rounded="8"
+            overflow="hidden"
+            width="full"
+            height={{ base: "auto", md: "sm" }}
+            objectFit="cover"
+            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/let's_connect_on_telegram.jpeg"
+          />
+        </Link>
       </Stack>
     </Container>
   </Box>
