@@ -15,7 +15,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useDisclosure,
+  useDisclosure
 } from "@chakra-ui/react";
 import { FiCloudRain } from "react-icons/fi";
 import { IoFlowerOutline, SiGooglephotos } from "react-icons/all";
@@ -28,7 +28,7 @@ export const DownloadCTA = () => {
   return (
     <>
       <Heading
-        bgGradient="linear(to-l, #ac58ff, #919191)"
+        bgGradient="linear(100deg, white, yellow)"
         bgClip="text"
         textAlign="center"
         as="h1"
@@ -54,12 +54,12 @@ export const DownloadCTA = () => {
             rounded="full"
             color={useColorModeValue("white.100", "white")}
             backdropFilter="blur(6px)"
-            boxShadow="2px 2px 30px white"
+            boxShadow="2px 2px 30px yellow"
             border="2px"
             _hover={{
               color: useColorModeValue("gray.500", "white"),
               bg: useColorModeValue("pink.100", "purple.300"),
-              boxShadow: "2xl",
+              boxShadow: "2xl"
             }}
           >
             <Icon as={IoFlowerOutline} boxSize={[16, 20, 24]} />
@@ -80,12 +80,12 @@ export const DownloadCTA = () => {
             rounded="full"
             color={useColorModeValue("white.100", "white")}
             backdropFilter="blur(6px)"
-            boxShadow="2px 2px 30px white"
+            boxShadow="2px 2px 30px yellow"
             border="2px"
             _hover={{
               color: useColorModeValue("gray.500", "white"),
               bg: useColorModeValue("pink.100", "purple.300"),
-              boxShadow: "2xl",
+              boxShadow: "2xl"
             }}
           >
             <Icon as={SiGooglephotos} boxSize={[16, 20, 24]} />
@@ -102,11 +102,10 @@ export const DownloadCTA = () => {
           p="6"
           color={useColorModeValue("white.100", "white")}
           backdropFilter="blur(6px)"
-          border="2px"
           _hover={{
             color: useColorModeValue("gray.500", "white"),
             bg: useColorModeValue("pink.100", "purple.300"),
-            boxShadow: "2xl",
+            boxShadow: "2xl"
           }}
         >
           <Icon as={FiCloudRain} boxSize="8" mx="4" />
@@ -122,7 +121,7 @@ export const DownloadCTA = () => {
         motionPreset="slideInBottom"
       >
         <ModalOverlay />
-        <ModalContent rounded="12" p="6">
+        <ModalContent rounded="12" p="6" color="pink">
           <ModalHeader>Foto's Downloaden</ModalHeader>
           <ModalCloseButton />
           <ModalBody>Klaar om 453.7 MB te downloaden?</ModalBody>
@@ -130,7 +129,8 @@ export const DownloadCTA = () => {
             <Button variant="ghost" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Link href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
+            <Link
+              href="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮.zip">
               <Button colorScheme="blue">Let's Do It</Button>
             </Link>
           </ModalFooter>

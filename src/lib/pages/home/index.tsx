@@ -72,8 +72,8 @@ const Home = () => (
     <div id="foto's" />
     <Box
       p="24"
-      boxShadow="lg"
       rounded="xl"
+      boxShadow="0px 0px 30px pink"
       bg={useColorModeValue("pink.300", "blue.300")}
       overflow="hidden"
       bgGradient="linear(to-r,  yellow.400, pink.200)"
