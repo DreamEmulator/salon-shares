@@ -48,6 +48,7 @@ const Home = () => (
     <IntroBanner />
     <SharingIsCaringBanner />
     <EmptyTipCards />
+    <div id="foto's" />
     <Box
       p="24"
       boxShadow="lg"
