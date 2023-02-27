@@ -65,7 +65,7 @@ const Testimonial = (props: TestimonialProps) => {
     >
       <Link href={link} target="_blank">
         <Flex
-          bg={useColorModeValue("teal.50", "purple.500")}
+          bg={useColorModeValue("teal.50", `purple.500`)}
           direction="column"
           position="relative"
           textAlign="center"
@@ -226,7 +226,7 @@ export const TipCards = () => {
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
             author="Café Willemsbrug"
             role="Voor Kate"
-            colorScheme="pink"
+            colorScheme="blue"
             link="https://goo.gl/maps/9QaoHR8XXVmjVn2d9"
             image="https://sebastiaan-hols.com/img/frontend/thumbs/das_boot_thumb.png"
           >

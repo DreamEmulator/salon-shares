@@ -2,13 +2,11 @@ import {
   Box,
   Center,
   Code,
-  Divider,
   Flex,
   Grid,
-  Heading,
-  Icon,
   Image,
   Link,
+  SimpleGrid,
   Stack,
   Text,
   useColorModeValue
@@ -18,7 +16,7 @@ import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
 import { DownloadCTA } from "./components/DownloadCTA";
-import { GrApple, SiGooglephotos } from "react-icons/all";
+import { Featured } from "./components/Featured";
 
 // @ts-ignore
 const Home = () => (
@@ -46,7 +44,17 @@ const Home = () => (
     </Text>
 
     <IntroBanner />
-    {/*<EmptyTipCards />*/}
+    <SimpleGrid gap="8">
+      <TitleText title="Featured" />
+      <Featured title={"Ik ben mijn Muze"}
+                blurb={"Loes stapt in een lange lijn pittige tantes en publiceert gewoon even een boek. Verrijk je kijk op de de kunstgeschiedenis en leer over deze ongelofelijke vrouwen."}
+                src={"https://media.s-bol.com/j53vx2o48zOB/z6vk4A8/843x1200.jpg"}
+                alt={"Ik ben mijn Muze door Loes Faber"} />
+      <Featured title={"Kaetes"}
+                blurb={"Shout out naar de handgemaakte keramiek van Katie. Prachtige vormen. Zachte kleuren. Sterke smaak."}
+                src={"https://cdn.shopify.com/s/files/1/0614/1172/1460/collections/DSC_0106_1000x.jpg?v=1647290504"}
+                alt={"Keramiek van Katie"} />
+    </SimpleGrid>
     <SharingIsCaringBanner />
     <div id="foto's" />
     <Box
@@ -57,52 +65,12 @@ const Home = () => (
       overflow="hidden"
       bgGradient="linear(to-r,  yellow.400, pink.200)"
     >
-      <Heading
-        color="white"
-        textAlign="center"
-        as="h1"
-        size={{ sm: "3xl", md: "4xl", lg: "4xl" }}
-        mb="16">Foto's</Heading>
-      {/*<PhotoGallery />*/}
-      <Center mb="12">
-        <Link href="https://www.icloud.com/sharedalbum/#B0XGzFCC1GJrTWn" target="_blank" color="white">
-          <Stack mx="12" alignItems="center"
-                 rounded="full"
-                 p="6"
-                 color={useColorModeValue("white.100", "white")}
-                 backdropFilter="blur(6px)"
-                 boxShadow="2xl"
-                 _hover={{
-                   color: useColorModeValue("gray.500", "white"),
-                   bg: useColorModeValue("pink.100", "purple.500"),
-                   boxShadow: "2xl"
-                 }}
-          >
-            <Icon as={GrApple} boxSize={{ sm: 16, md: 20, lg: 24 }} />
-            <Text textAlign="center">Apple Photo's</Text>
-          </Stack>
-        </Link>
-        <Link href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A" target="_blank" color="white">
-          <Stack mx="12" alignItems="center"
-                 rounded="full"
-                 p="6"
-                 color={useColorModeValue("white.100", "white")}
-                 backdropFilter="blur(6px)"
-                 boxShadow="2xl"
-                 _hover={{
-                   color: useColorModeValue("gray.500", "white"),
-                   bg: useColorModeValue("pink.100", "purple.500"),
-                   boxShadow: "2xl"
-                 }}>
-            <Icon as={SiGooglephotos} boxSize={{ sm: 16, md: 20, lg: 24 }} />
-            <Text textAlign="center">Google Photo's</Text>
-          </Stack>
-        </Link>
-      </Center>
       <DownloadCTA />
     </Box>
+    <TitleText title={"Tips"} />
+    <TipCards />
     <Stack>
-      <TitleText title={"Muziek"} />
+      <TitleText title={"Rotterdam"} />
       <Flex
         minH="xl"
         borderRadius="xl"
@@ -122,10 +90,6 @@ const Home = () => (
         ></iframe>
       </Flex>
     </Stack>
-    <Divider my="xl" />
-
-    <TitleText title={"Tips"} />
-    <TipCards />
     <Center mt="24">
       <Link href="https://dream-emulator.com">
         <Image
