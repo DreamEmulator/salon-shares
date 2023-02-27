@@ -17,10 +17,10 @@ export const IntroBanner = () => {
           color="white"
         >
           <Box maxW="xl" px="8">
-            <Heading as="h1" size="3xl" fontWeight="extrabold">
+            <Heading as="h1" size={{ sm: "xl", md: "2xl" }} fontWeight="extrabold">
               Een bijzondere avond vol sterren.
             </Heading>
-            <Text fontSize={{ md: "2xl" }} mt="4" maxW="lg">
+            <Text fontSize={{ sm: "md", md: "xl" }} mt="4" maxW="lg">
               Werkelijk wonderlijk wat voor een sfeer mensen met passie kunnen
               maken. Hierbij mijn voorzet om zoveel mogelijk kennis,
               vriendschappen, inzichten en vergezichten te delen 👇
@@ -33,7 +33,7 @@ export const IntroBanner = () => {
               <Button
                 as="a"
                 href="#foto's"
-                color="pink.400"
+                colorScheme="pink"
                 px="8"
                 rounded="full"
                 size="lg"

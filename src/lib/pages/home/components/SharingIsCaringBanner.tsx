@@ -2,19 +2,23 @@ import { Box, Container, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 export const SharingIsCaringBanner = () => (<Box bg="bg-surface">
     <Container py={{ base: "16", md: "24" }}>
-      <Stack backdropBlur="6px" direction={{ base: "column", md: "row" }} spacing={{ base: "12", lg: "16" }}>
+      <Stack backdropBlur="6px" direction={{ base: "column", md: "row" }}
+             spacing={{ base: "12", lg: "16" }}>
         <Stack>
           <Heading size={{ base: "md", md: "xl" }} fontWeight="extrabold" my="8">
             Sharing is caring
           </Heading>
-          <Text fontSize="xl" color="muted">
-            Wat jullie maar willen delen. Stuur het naar me op.
+          <Text fontSize="xl">
+            Wat jullie maar willen delen.
           </Text>
-          <Text fontSize="xl" color="muted">
+          <Text fontSize="xl">
+            Stuur het naar me op.
+          </Text>
+          <Text fontSize="xl">
             Ik verzamel het hier allemaal op een leuke manier.
           </Text>
-          <Text fontSize="xl" color="muted">
-            Dan kunnen we daar altijd weer inspiratie uit putten ✨
+          <Text fontSize="xl">
+            Dan kunnen we daar altijd weer inspiratie uit putten 😃
           </Text>
         </Stack>
         <Image

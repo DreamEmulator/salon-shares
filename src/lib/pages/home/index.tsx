@@ -13,7 +13,7 @@ import {
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import { EmptyTipCards, TipCards } from "./components/TipCards";
+import { TipCards } from "./components/TipCards";
 import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
@@ -46,8 +46,8 @@ const Home = () => (
     </Text>
 
     <IntroBanner />
+    {/*<EmptyTipCards />*/}
     <SharingIsCaringBanner />
-    <EmptyTipCards />
     <div id="foto's" />
     <Box
       p="24"
@@ -97,6 +97,7 @@ const Home = () => (
       </Flex>
     </Stack>
     <Divider my="xl" />
+
     <TitleText title={"Tips"} />
     <TipCards />
     <Center mt="24">

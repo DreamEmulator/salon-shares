@@ -65,7 +65,7 @@ const Testimonial = (props: TestimonialProps) => {
     >
       <Link href={link} target="_blank">
         <Flex
-          bg={useColorModeValue("teal.100", "purple.500")}
+          bg={useColorModeValue("teal.50", "purple.500")}
           direction="column"
           position="relative"
           textAlign="center"
@@ -110,7 +110,7 @@ const Testimonial = (props: TestimonialProps) => {
           color="white"
           px="6"
           pb="8"
-          bg={useColorModeValue("teal.100", "purple.500")}
+          bg={useColorModeValue("teal.50", "purple.500")}
         >
           <Box
             boxShadow="xl"
@@ -119,7 +119,7 @@ const Testimonial = (props: TestimonialProps) => {
             bottom="0"
             w="full"
             h="full"
-            bg={useColorModeValue("teal.100", "purple.500")}
+            bg={useColorModeValue("teal.50", "purple.500")}
             roundedBottom={{ md: "lg" }}
             overflow="hidden"
             _before={{
