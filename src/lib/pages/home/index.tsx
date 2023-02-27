@@ -25,13 +25,13 @@ const Home = () => (
       my="16"
       bgGradient="linear(to-l, #7928CA, #f98787)"
       bgClip="text"
-      fontSize="7xl"
-      px="8"
+      fontSize={["3xl", "4xl", "5xl", "6xl"]}
+      px="12"
       py="8"
       fontWeight="extrabold"
       boxShadow={useColorModeValue(
         "0px 0px 0px 20px rgba(255,0,125,0.1)",
-        "0px 0px 0px 2px rgba(240,240,240,0.2)"
+        "0px 0px 10px 400px rgba(255,0,125,0.1)"
       )}
       textAlign="center"
       rounded="full"
@@ -90,9 +90,13 @@ const Home = () => (
         ></iframe>
       </Flex>
     </Stack>
-    <Center mt="24">
+    <Center my="24">
       <Link href="https://dream-emulator.com">
         <Image
+          boxShadow={useColorModeValue(
+            "0px 0px 0px 20px rgba(255,0,125,0.1)",
+            "0px 0px 10px 50px rgba(255,0,125,0.1)"
+          )}
           maxHeight="200px"
           maxWidth="200px"
           rounded="full"
