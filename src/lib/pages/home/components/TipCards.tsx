@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import { FiBook, FiShare2 } from "react-icons/all";
+import { AiOutlineCoffee, FiBook, FiShare2 } from "react-icons/all";
 
 interface TestimonialProps {
   logo: ReactNode;
@@ -202,7 +202,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={FiBook} boxSize={6} />}
             author="Voor Loes"
-            role="Van Sebas"
+            role="Van Bas"
             colorScheme="orange"
             link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
             image="https://mf.b37mrtl.ru/rbthmedia/images/2021.05/original/60b50d1615e9f96e404dff9b.jpg"
@@ -214,7 +214,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={FiShare2} boxSize={6} />}
             author="Voor Katey"
-            role="Van Sebas"
+            role="Van Bas"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
             image="https://sebastiaan-hols.com/images/1654380598A0FFBA21-2203-4125-BEE9-C55230815291.jpeg"
@@ -223,6 +223,17 @@ export const TipCards = () => {
             uit wat the "Liberal Arts Education" betekend in real world everyday
             value. Dit is een goeie om afentoe te relativeren over je keuzes en
             motivaties.
+          </Testimonial>
+          <Testimonial
+            logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
+            author="Voor Kate"
+            role="Van Bas"
+            colorScheme="pink"
+            link="https://goo.gl/maps/9QaoHR8XXVmjVn2d9"
+            image="https://sebastiaan-hols.com/img/frontend/thumbs/das_boot_thumb.png"
+          >
+            Cafe Willemsbrug.
+            De echtste plek in Rotterdam voor een bakkie en een goed gesprek.
           </Testimonial>
         </SimpleGrid>
       </Box>
