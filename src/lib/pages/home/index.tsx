@@ -58,11 +58,15 @@ const Home = () => (
       <Featured title={"Ik ben mijn Muze"}
                 blurb={"Loes stapt in een lange lijn pittige tantes en publiceert gewoon even een boek. Verrijk je kijk op de kunstgeschiedenis en leer over deze ongelofelijke vrouwen."}
                 src={"https://media.s-bol.com/j53vx2o48zOB/z6vk4A8/843x1200.jpg"}
-                alt={"Ik ben mijn Muze door Loes Faber"} />
+                alt={"Ik ben mijn Muze door Loes Faber"}
+                link={"https://libris.nl/boek?authortitle=loes-faber/ik-ben-mijn-muze--9789038808505"}
+      />
       <Featured title={"Kaetes"}
                 blurb={"Shout out naar de handgemaakte keramiek van Katie. Prachtige vormen. Zachte kleuren. Sterke smaak."}
                 src={"https://cdn.shopify.com/s/files/1/0614/1172/1460/collections/DSC_0106_1000x.jpg?v=1647290504"}
-                alt={"Keramiek van Katie"} />
+                alt={"Keramiek van Katie"}
+                link={"https://www.kaetes.com/"}
+      />
     </SimpleGrid>
     <SharingIsCaringBanner />
     <div id="foto's" />

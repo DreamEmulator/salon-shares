@@ -1,13 +1,25 @@
-import { Button, Card, CardBody, CardFooter, Heading, Image, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  Heading,
+  Image,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue
+} from "@chakra-ui/react";
 
 interface FeaturedProps {
   title: string;
   blurb: string;
   src: string;
   alt: string;
+  link: string;
 }
 
-export const Featured: React.FC<FeaturedProps> = ({ title, blurb, src, alt }) => (
+export const Featured: React.FC<FeaturedProps> = ({ title, blurb, src, alt, link }) => (
   <Card
     rounded="12"
     direction={{ base: "column", sm: "row" }}
@@ -29,9 +41,11 @@ export const Featured: React.FC<FeaturedProps> = ({ title, blurb, src, alt }) =>
         </Text>
       </CardBody>
       <CardFooter>
-        <Button color={useColorModeValue("purple.400", "pink")}>
-          Checken
-        </Button>
+        <Link href={link}>
+          <Button color={useColorModeValue("purple.400", "pink")}>
+            Checken
+          </Button>
+        </Link>
       </CardFooter>
     </Stack>
   </Card>
