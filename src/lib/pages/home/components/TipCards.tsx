@@ -223,7 +223,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={FiShare2} boxSize={6} />}
             tipTitle="This is Water"
-            tipGiver="Tip van Bas"
+            tipGiver="Tip voor Katie"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
             image="https://www.littlebrown.com/wp-content/uploads/2022/08/DavidFosterWallace_INFINITEJEST-4.jpg?fit=3123%2C2054"
@@ -234,7 +234,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={FiBook} boxSize={6} />}
             tipTitle="The Scythian Princess"
-            tipGiver="Tip van Bas"
+            tipGiver="Tip voor Loes"
             colorScheme="orange"
             link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
             image="https://preview.redd.it/what-do-you-think-of-this-5th-century-bc-scythian-deer-v0-mbpivqjrx8v81.jpg?auto=webp&s=55fc5f47dd01b7668009c6416504e5024100ed29"
@@ -245,7 +245,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
             tipTitle="Café Willemsbrug"
-            tipGiver="Tip van Bas"
+            tipGiver="Tip voor Kate"
             colorScheme="blue"
             link="https://goo.gl/maps/9QaoHR8XXVmjVn2d9"
             image="https://sebastiaan-hols.com/img/frontend/thumbs/das_boot_thumb.png"
@@ -256,7 +256,7 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={BiCamera} boxSize={6} />}
             tipTitle="Fotomuseum App"
-            tipGiver="Tip van Bas"
+            tipGiver="Tip voor Hester"
             colorScheme="red"
             link="https://www.nederlandsfotomuseum.nl/eregalerij-app/"
             image="https://eregalerij.nederlandsfotomuseum.nl/build/img/home.jpg"

@@ -1,7 +1,6 @@
 import {
   Box,
   Center,
-  Code,
   Divider,
   Flex,
   Grid,
@@ -17,33 +16,14 @@ import { TitleText } from "./components/TitleText";
 import { IntroBanner } from "./components/IntroBanner";
 import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
 import { DownloadCTA } from "./components/DownloadCTA";
-import { Featured } from "./components/Featured";
+import { Featured, IconVariant } from "./components/Featured";
+import { motion } from "framer-motion";
+import { HeroText } from "./components/HeroText";
 
 // @ts-ignore
 const Home = () => (
   <Grid gap={6}>
-    <Text
-      my="16"
-      bgGradient="linear(to-l, #7928CA, #f98787)"
-      bgClip="text"
-      fontSize={["3xl", "4xl", "5xl", "6xl"]}
-      px="12"
-      py="8"
-      fontWeight="extrabold"
-      boxShadow={useColorModeValue(
-        "0px 0px 0px 20px rgba(255,0,125,0.1)",
-        "0px 0px 10px 400px rgba(255,0,125,0.1)"
-      )}
-      textAlign="center"
-      rounded="full"
-      backdropFilter="blur(1px) saturate(80%) brightness(110%) opacity(0.10)"
-    >
-      Salon de Bon Bon #1
-      <Center>
-        <Code> 25.02.23 - Sint-Jobskade - Rotterdam </Code>
-      </Center>
-    </Text>
-
+    <HeroText />
     <Text fontSize={[16, 18, 24]} color="muted" fontStyle="oblique">
       Salon (Gathering)
     </Text>
@@ -60,32 +40,26 @@ const Home = () => (
                 src={"https://media.s-bol.com/j53vx2o48zOB/z6vk4A8/843x1200.jpg"}
                 alt={"Ik ben mijn Muze door Loes Faber"}
                 link={"https://libris.nl/boek?authortitle=loes-faber/ik-ben-mijn-muze--9789038808505"}
+                icon={IconVariant.book}
       />
       <Featured title={"Kaetes"}
                 blurb={"Shout out naar de handgemaakte keramiek van Katie. Prachtige vormen. Zachte kleuren. Sterke smaak."}
                 src={"https://cdn.shopify.com/s/files/1/0614/1172/1460/collections/DSC_0106_1000x.jpg?v=1647290504"}
                 alt={"Keramiek van Katie"}
                 link={"https://www.kaetes.com/"}
+                icon={IconVariant.site}
       />
       <Featured title={"I'm Speaking!"}
                 blurb={"Sophie en Coco onderzoeken de verschillende manieren waarop het patriarchaat nog steeds springlevend is. Feiten, cijfers … actie!"}
                 src={"https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXBGdXdFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4bc6bc54df980ef8381254ab8289cfbe512048e1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Schermafbeelding_is.jpg"}
                 alt={"Keramiek van Katie"}
                 link={"https://imspeaking.nl/"}
+                icon={IconVariant.podcast}
       />
     </SimpleGrid>
     <SharingIsCaringBanner />
     <div id="foto's" />
-    <Box
-      p="24"
-      rounded="xl"
-      boxShadow="0px 0px 30px pink"
-      bg={useColorModeValue("pink.300", "blue.300")}
-      overflow="hidden"
-      bgGradient="linear(to-r,  yellow.400, pink.200)"
-    >
-      <DownloadCTA />
-    </Box>
+    <DownloadCTA />
     <TitleText title={"Tips"} />
     <TipCards />
     <Stack>
@@ -111,20 +85,37 @@ const Home = () => (
     </Stack>
     <Center my="24">
       <Link href="https://dream-emulator.com">
-        <Image
+        <Box
+          as={motion.div}
+          rounded="full"
           boxShadow={useColorModeValue(
             "0px 0px 0px 20px rgba(255,0,125,0.1)",
             "0px 0px 10px 50px rgba(255,0,125,0.1)"
           )}
-          maxHeight="200px"
-          maxWidth="200px"
-          rounded="full"
-          overflow="hidden"
-          width="full"
-          height={{ base: "auto", md: "sm" }}
-          objectFit="cover"
-          src="https://media.tenor.com/SAJ5PrWD0DcAAAAC/diamond.gif"
-        />
+          whileHover={{
+            boxShadow: useColorModeValue(
+              "0px 0px 0px 100px rgba(255,0,125,0.1)",
+              "0px 0px 10px 1000px rgba(255,0,125,0.1)"
+            )
+          }}
+          whileTap={{
+            scale: useColorModeValue(
+              2,
+              100
+            )
+          }}
+        >
+          <Image
+            maxHeight="200px"
+            maxWidth="200px"
+            rounded="full"
+            overflow="hidden"
+            width="full"
+            height={{ base: "auto", md: "sm" }}
+            objectFit="cover"
+            src="https://media.tenor.com/SAJ5PrWD0DcAAAAC/diamond.gif"
+          />
+        </Box>
       </Link>
     </Center>
   </Grid>

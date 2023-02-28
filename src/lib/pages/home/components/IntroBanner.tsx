@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Heading, Img, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { FocusBox } from "./FocusBox";
 
 export const IntroBanner = () => {
   return (
@@ -30,18 +31,20 @@ export const IntroBanner = () => {
               mt="10"
               spacing="4"
             >
-              <Button
-                as="a"
-                href="#foto's"
-                colorScheme="pink"
-                px="8"
-                rounded="full"
-                size="lg"
-                fontSize="md"
-                fontWeight="bold"
-              >
-                Bekijk de foto's
-              </Button>
+              <FocusBox>
+                <Button
+                  as="a"
+                  href="#foto's"
+                  colorScheme="pink"
+                  px="8"
+                  rounded="full"
+                  size="lg"
+                  fontSize="md"
+                  fontWeight="bold"
+                >
+                  Bekijk de foto's
+                </Button>
+              </FocusBox>
             </Stack>
           </Box>
         </Box>

@@ -7,9 +7,7 @@ interface TitleTextProps {
 export const TitleText: React.FC<TitleTextProps> = ({ title }) => (
   <Text
     my="4"
-    pt="12"
-    rounded="full"
-    alignItems="flex-start"
+    rounded={12}
     backdropFilter="blur(6px)"
     bgGradient={useColorModeValue(
       `linear(90deg,  #FFF, #F00)`,

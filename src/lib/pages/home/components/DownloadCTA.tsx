@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   Heading,
@@ -19,6 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { FiCloudRain } from "react-icons/fi";
 import { IoFlowerOutline, SiGooglephotos } from "react-icons/all";
+import { motion } from "framer-motion";
 
 {
   /* DOWNLOAD CTA*/
@@ -26,7 +28,14 @@ import { IoFlowerOutline, SiGooglephotos } from "react-icons/all";
 export const DownloadCTA = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
+    <Box
+      p="24"
+      rounded="xl"
+      boxShadow="0px 0px 30px pink"
+      bg={useColorModeValue("pink.300", "blue.300")}
+      overflow="hidden"
+      bgGradient="linear(45deg,  orange.400, pink.200)"
+    >
       <Heading
         bgGradient="linear(100deg, white, yellow)"
         bgClip="text"
@@ -47,52 +56,66 @@ export const DownloadCTA = () => {
           target="_blank"
           color="white"
         >
-          <Stack
-            my="6"
-            p="8"
-            alignItems="center"
+          <Box
+            as={motion.div}
             rounded="full"
-            color={useColorModeValue("white.100", "white")}
-            backdropFilter="blur(6px)"
-            boxShadow="2px 2px 30px yellow"
-            border="2px"
-            _hover={{
-              color: useColorModeValue("gray.500", "white"),
-              bg: useColorModeValue("pink.100", "purple.300"),
-              boxShadow: "2xl"
-            }}
+            whileHover={{ scale: 1.05, boxShadow: "2px 2px 100px yellow" }}
+            whileTap={{ scale: 0.9 }}
+            transition="0.5s"
           >
-            <Icon as={IoFlowerOutline} boxSize={[16, 20, 24]} />
-            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">
-              Apple
-            </Text>
-          </Stack>
+            <Stack
+              my="6"
+              p="8"
+              alignItems="center"
+              rounded="full"
+              color={useColorModeValue("white.100", "white")}
+              backdropFilter="blur(6px)"
+              boxShadow="2px 2px 30px yellow"
+              border="2px"
+              _hover={{
+                color: useColorModeValue("gray.500", "white"),
+                bg: useColorModeValue("pink.100", "purple.300")
+              }}
+            >
+              <Icon as={IoFlowerOutline} boxSize={[16, 20, 24]} />
+              <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">
+                Apple
+              </Text>
+            </Stack>
+          </Box>
         </Link>
         <Link
           href="https://photos.app.goo.gl/yFwBwvyZKrLrS363A"
           target="_blank"
           color="white"
         >
-          <Stack
-            my="6"
-            p="8"
-            alignItems="center"
+          <Box
+            as={motion.div}
             rounded="full"
-            color={useColorModeValue("white.100", "white")}
-            backdropFilter="blur(6px)"
-            boxShadow="2px 2px 30px yellow"
-            border="2px"
-            _hover={{
-              color: useColorModeValue("gray.500", "white"),
-              bg: useColorModeValue("pink.100", "purple.300"),
-              boxShadow: "2xl"
-            }}
+            whileHover={{ scale: 1.05, boxShadow: "2px 2px 100px yellow" }}
+            whileTap={{ scale: 0.9 }}
+            transition="0.5s"
           >
-            <Icon as={SiGooglephotos} boxSize={[16, 20, 24]} />
-            <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">
-              Google
-            </Text>
-          </Stack>
+            <Stack
+              my="6"
+              p="8"
+              alignItems="center"
+              rounded="full"
+              color={useColorModeValue("white.100", "white")}
+              backdropFilter="blur(6px)"
+              boxShadow="2px 2px 30px yellow"
+              border="2px"
+              _hover={{
+                color: useColorModeValue("gray.500", "white"),
+                bg: useColorModeValue("pink.100", "purple.300")
+              }}
+            >
+              <Icon as={SiGooglephotos} boxSize={[16, 20, 24]} />
+              <Text fontSize={[16, 20, 24]} fontWeight="bold" textAlign="center">
+                Google
+              </Text>
+            </Stack>
+          </Box>
         </Link>
       </Stack>
       <Flex justify="space-around" cursor="pointer">
@@ -136,6 +159,6 @@ export const DownloadCTA = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };

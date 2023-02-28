@@ -1,6 +1,12 @@
 import { Box, Container, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { FocusBox } from "./FocusBox";
 
-export const SharingIsCaringBanner = () => (<Box bg="bg-surface">
+export const SharingIsCaringBanner = () => (
+  <Box
+    as={motion.div}
+    bg="bg-surface"
+  >
     <Container py={{ base: "16", md: "24" }}>
       <Stack backdropBlur="6px" direction={{ base: "column", md: "row" }}
              spacing={{ base: "12", lg: "16" }}>
@@ -22,14 +28,16 @@ export const SharingIsCaringBanner = () => (<Box bg="bg-surface">
           </Text>
         </Stack>
         <Link href="https://t.me/dream_emulator" target="_blank">
-          <Image
-            rounded="8"
-            overflow="hidden"
-            width="full"
-            height={{ base: "auto", md: "sm" }}
-            objectFit="cover"
-            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/let's_connect_on_telegram.jpeg"
-          />
+          <FocusBox>
+            <Image
+              rounded="8"
+              overflow="hidden"
+              width="full"
+              height={{ base: "auto", md: "sm" }}
+              objectFit="cover"
+              src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/let's_connect_on_telegram.jpeg"
+            />
+          </FocusBox>
         </Link>
       </Stack>
     </Container>
