@@ -198,22 +198,11 @@ export const TipCards = () => {
   return (
     <Box as="section" py="12" p="6" rounded="md">
       <Box maxW={{ base: "xl", md: "6xl" }} mx="auto" px={{ md: "8" }}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="10">
-          <Testimonial
-            logo={<Icon as={FiBook} boxSize={6} />}
-            author="The Scythian Princess"
-            role="Voor Loes"
-            colorScheme="orange"
-            link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
-            image="https://preview.redd.it/what-do-you-think-of-this-5th-century-bc-scythian-deer-v0-mbpivqjrx8v81.jpg?auto=webp&s=55fc5f47dd01b7668009c6416504e5024100ed29"
-          >
-            Scythian Ice Princess is een ongelofelijke dame met een hele
-            bijzondere tatoeage.
-          </Testimonial>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="6" gridTemplateRows="masonry">
           <Testimonial
             logo={<Icon as={FiShare2} boxSize={6} />}
             author="This is Water"
-            role="Voor Katie"
+            role="Tip van Bas"
             colorScheme="pink"
             link="https://youtu.be/ms2BvRbjOYo"
             image="https://www.littlebrown.com/wp-content/uploads/2022/08/DavidFosterWallace_INFINITEJEST-4.jpg?fit=3123%2C2054"
@@ -222,9 +211,31 @@ export const TipCards = () => {
             uit wat the Liberal Arts Education echt kan brengen.
           </Testimonial>
           <Testimonial
+            logo={<Icon as={FiBook} boxSize={6} />}
+            author="The Scythian Princess"
+            role="Tip van Bas"
+            colorScheme="orange"
+            link="https://www.thearchaeologist.org/blog/meet-the-2500-year-old-siberian-ice-maiden-and-her-tattoos"
+            image="https://preview.redd.it/what-do-you-think-of-this-5th-century-bc-scythian-deer-v0-mbpivqjrx8v81.jpg?auto=webp&s=55fc5f47dd01b7668009c6416504e5024100ed29"
+          >
+            Scythian Ice Princess is een ongelofelijke dame met een hele
+            bijzondere tatoeage.
+          </Testimonial>
+          <Testimonial
+            logo={<Icon as={BiMicrophone} boxSize={6} />}
+            author="I'm speaking"
+            role="Tip van Lisa"
+            colorScheme="green"
+            link="https://www.buzzsprout.com/1549861"
+            image="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXBGdXdFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4bc6bc54df980ef8381254ab8289cfbe512048e1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Schermafbeelding_is.jpg"
+          >
+            In de podcast I’m Speaking onderzoeken Sophie van Gool en Coco van Beveren de verschillende manieren waarop
+            het patriarchaat nog steeds springlevend is. Feiten, cijfers … actie!
+          </Testimonial>
+          <Testimonial
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
             author="Café Willemsbrug"
-            role="Voor Kate"
+            role="Tip van Bas"
             colorScheme="blue"
             link="https://goo.gl/maps/9QaoHR8XXVmjVn2d9"
             image="https://sebastiaan-hols.com/img/frontend/thumbs/das_boot_thumb.png"
@@ -235,29 +246,18 @@ export const TipCards = () => {
           <Testimonial
             logo={<Icon as={BiCamera} boxSize={6} />}
             author="Fotomuseum App"
-            role="Voor Hester"
+            role="Tip van Bas"
             colorScheme="red"
             link="https://www.nederlandsfotomuseum.nl/eregalerij-app/"
             image="https://eregalerij.nederlandsfotomuseum.nl/build/img/home.jpg"
           >
             De Eregalerij is een hele gave plek om te leren kijken naar fotografie.
-            De app zit ook vol mooie animaties van Bas. Dus zeker checken 😇
-          </Testimonial>
-          <Testimonial
-            logo={<Icon as={BiMicrophone} boxSize={6} />}
-            author="I'm speaking"
-            role="Voor Bas"
-            colorScheme="green"
-            link="https://www.buzzsprout.com/1549861"
-            image="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXBGdXdFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4bc6bc54df980ef8381254ab8289cfbe512048e1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Schermafbeelding_is.jpg"
-          >
-            In de podcast I’m Speaking onderzoeken Sophie van Gool en Coco van Beveren de verschillende manieren waarop
-            het patriarchaat nog steeds springlevend is. Feiten, cijfers … actie!
+            De app zit ook vol mooie animaties. Dus zeker checken 😇
           </Testimonial>
           <Testimonial
             logo={<Icon as={BsHeadphones} boxSize={6} />}
             author="Podcast: Sophie en Coco naar het einde van de loonkloof"
-            role="Voor Bas"
+            role="Tip van Lisa"
             colorScheme="pink"
             link="https://ikverdienmeer.com/podcast-sophie-en-coco-naar-het-einde-van-de-loonkloof/"
             image="https://ikverdienmeer.com/wp-content/uploads/2022/11/iceland.jpg"
