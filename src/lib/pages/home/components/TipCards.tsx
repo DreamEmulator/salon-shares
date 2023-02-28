@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import { AiOutlineCoffee, BiCamera, BiMicrophone, BsHeadphones, FiBook, FiShare2 } from "react-icons/all";
+import { AiOutlineCoffee, BiCamera, BsHeadphones, FiBook, FiShare2 } from "react-icons/all";
 
 interface TestimonialProps {
   logo: ReactNode;
@@ -235,18 +235,6 @@ export const TipCards = () => {
             bijzondere tatoeage.
           </Testimonial>
           <Testimonial
-            logo={<Icon as={BiMicrophone} boxSize={6} />}
-            tipTitle="I'm speaking"
-            tipGiver="Tip van Lisa"
-            colorScheme="green"
-            link="https://www.buzzsprout.com/1549861"
-            image="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRXBGdXdFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4bc6bc54df980ef8381254ab8289cfbe512048e1/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Schermafbeelding_is.jpg"
-          >
-            In de podcast I’m Speaking onderzoeken Sophie van Gool en Coco van
-            Beveren de verschillende manieren waarop het patriarchaat nog steeds
-            springlevend is. Feiten, cijfers … actie!
-          </Testimonial>
-          <Testimonial
             logo={<Icon as={AiOutlineCoffee} boxSize={6} />}
             tipTitle="Café Willemsbrug"
             tipGiver="Tip van Bas"
@@ -276,10 +264,10 @@ export const TipCards = () => {
             link="https://ikverdienmeer.com/podcast-sophie-en-coco-naar-het-einde-van-de-loonkloof/"
             image="https://ikverdienmeer.com/wp-content/uploads/2022/11/iceland.jpg"
           >
-            Sophie & Coco reisden naar IJsland om met de vrouwen te spreken die
-            deze staking organiseerden. Hoewel het inmiddels bijna 50 jaar
+            Sophie & Coco reisden naar IJsland om met vrouwen te spreken over
+            een staking organiseerden. Hoewel het inmiddels bijna 50 jaar
             geleden is, herinneren mensen zich de staking nog als de dag van
-            gisteren.
+            gisteren....
           </Testimonial>
         </SimpleGrid>
       </Box>
