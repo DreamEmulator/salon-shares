@@ -48,10 +48,10 @@ const Home = () => (
       Salon (Gathering)
     </Text>
     <Text color="muted" fontStyle="italic">
-      A salon is a gathering of people held by an inspiring host. During the gathering they amuse one another and
+      A salon is a gathering of people held by an inspiring host. During the gathering guests amuse one another and
       increase their knowledge through conversation.
     </Text>
-    <Divider my="6" color="pink.400" />
+    <Divider mb="6" color="pink.400" />
     <IntroBanner />
     <SimpleGrid gap="8">
       <TitleText title="Featured" />
