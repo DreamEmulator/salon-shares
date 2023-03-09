@@ -1,4 +1,13 @@
-import { Box, Button, Flex, Heading, Img, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Img,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { FocusBox } from "./FocusBox";
 
 export const IntroBanner = () => {
@@ -18,7 +27,11 @@ export const IntroBanner = () => {
           color="white"
         >
           <Box maxW="xl" px="8">
-            <Heading as="h1" size={{ sm: "xl", md: "2xl" }} fontWeight="extrabold">
+            <Heading
+              as="h1"
+              size={{ sm: "xl", md: "2xl" }}
+              fontWeight="extrabold"
+            >
               Een bijzondere avond vol sterren.
             </Heading>
             <Text fontSize={{ sm: "md", md: "xl" }} mt="4" maxW="lg">
@@ -66,7 +79,7 @@ export const IntroBanner = () => {
       >
         <Box position="relative" w="full" h="full">
           <Img
-            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/Salon+de+Bon+Bon+%231+🔮+-+Foto+103+van+142.jpeg"
+            src="https://sharing-dream-emulations.s3.eu-central-1.amazonaws.com/SalonDeBonBon%231/banner_photo.jpg"
             alt="Main Image"
             w="full"
             h="full"
