@@ -1,6 +1,6 @@
 import { Box, Container, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { FocusBox } from "./FocusBox";
+import { FocusBox } from "../animators/FocusBox";
 
 export const SharingIsCaringBanner = () => (
   <Box

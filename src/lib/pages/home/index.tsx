@@ -11,11 +11,11 @@ import {
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import { TipCards } from "./components/TipCards";
+import { TipCards } from "./components/galleries/tips/TipCards";
 import { TitleText } from "./components/TitleText";
-import { IntroBanner } from "./components/IntroBanner";
-import { SharingIsCaringBanner } from "./components/SharingIsCaringBanner";
-import { DownloadCTA } from "./components/DownloadCTA";
+import { IntroBanner } from "./components/banners/IntroBanner";
+import { SharingIsCaringBanner } from "./components/banners/SharingIsCaringBanner";
+import { DownloadCTA } from "./components/banners/DownloadCTA";
 import { Featured, IconVariant } from "./components/Featured";
 import { motion } from "framer-motion";
 import { HeroText } from "./components/HeroText";

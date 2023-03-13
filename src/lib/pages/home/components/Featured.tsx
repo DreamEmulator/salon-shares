@@ -12,7 +12,7 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import { FaGlobe, FiBook, FiHeadphones } from "react-icons/all";
-import { FocusBox } from "./FocusBox";
+import { FocusBox } from "./animators/FocusBox";
 
 interface FeaturedProps {
   title: string;

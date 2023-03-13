@@ -1,14 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Img,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { FocusBox } from "./FocusBox";
+import { Box, Button, Flex, Heading, Img, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import { FocusBox } from "../animators/FocusBox";
 
 export const IntroBanner = () => {
   return (
