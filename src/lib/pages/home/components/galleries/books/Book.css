@@ -1,0 +1,21 @@
+/* Center the book */
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.book::before {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    background-image: url(https://i.imgur.com/5udcDlp.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    top: 85%;
+    left: 32.5%;
+}
