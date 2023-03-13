@@ -4,9 +4,11 @@ import {
   Divider,
   Flex,
   Grid,
+  HStack,
   Image,
   Link,
   SimpleGrid,
+  Spacer,
   Stack,
   Text,
   useColorModeValue
@@ -19,6 +21,7 @@ import { DownloadCTA } from "./components/banners/DownloadCTA";
 import { Featured, IconVariant } from "./components/Featured";
 import { motion } from "framer-motion";
 import { HeroText } from "./components/HeroText";
+import BooksGrid from "./components/galleries/books/BooksGrid";
 
 // @ts-ignore
 const Home = () => (
@@ -57,12 +60,35 @@ const Home = () => (
                 icon={IconVariant.podcast}
       />
     </SimpleGrid>
+    {/*Contact*/}
     <SharingIsCaringBanner />
+    {/*Foto's*/}
     <div id="foto's" />
     <DownloadCTA />
+    {/*Boekenplank*/}
+    <HStack
+      justifyContent="center" mt="xl" fontWeight="black"
+      textShadow="2px 2px 20px #f0f"
+      transition="1s"
+      _hover={{ textShadow: "2px 2px 100px #f0f" }}
+      px="6xl">
+      <Text fontSize="7xl">🔮</Text>
+      <Spacer />
+      <Text
+        color="white"
+        fontSize="6xl"
+      >
+        Boekenplank
+      </Text>
+      <Spacer />
+      <Text fontSize="7xl">📚</Text>
+    </HStack>
+    <BooksGrid />
+    {/*TIPS*/}
     <TitleText title={"Tips"} />
     <TipCards />
-    <Stack>
+    {/*DJ-Set*/}
+    <Stack mb="200px">
       <TitleText title={"Rotterdam"} />
       <Flex
         minH="xl"
@@ -83,6 +109,7 @@ const Home = () => (
         ></iframe>
       </Flex>
     </Stack>
+    {/* Dream-Emulator Logo*/}
     <Center my="24">
       <Link href="https://dream-emulator.com">
         <Box

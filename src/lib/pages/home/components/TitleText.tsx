@@ -6,7 +6,7 @@ interface TitleTextProps {
 
 export const TitleText: React.FC<TitleTextProps> = ({ title }) => (
   <Text
-    my="4"
+    my="24"
     rounded={12}
     backdropFilter="blur(6px)"
     bgGradient={useColorModeValue(

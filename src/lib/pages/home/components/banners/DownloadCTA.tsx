@@ -30,6 +30,7 @@ export const DownloadCTA = () => {
   return (
     <Box
       p="24"
+      my="32"
       rounded="xl"
       boxShadow="0px 0px 30px pink"
       bg={useColorModeValue("pink.300", "blue.300")}
