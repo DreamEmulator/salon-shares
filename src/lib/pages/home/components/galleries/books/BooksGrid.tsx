@@ -12,7 +12,7 @@ const BooksGrid = () => {
     link: "https://www.bol.com/nl/nl/p/keith-haring-journals/1001004007250566/?bltgh=kqzEUdaITYSIbGcGJM1EWA.2_12.13.ProductTitle"
   }];
 
-  return books.map(book => <FocusBox><Book key={book.title} {...book} /></FocusBox>);
+  return <>{books.map(book => <FocusBox><Book key={book.title} {...book} /></FocusBox>)}</>;
 };
 
 export default BooksGrid;
