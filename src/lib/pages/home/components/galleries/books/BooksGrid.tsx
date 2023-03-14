@@ -4,7 +4,7 @@ import { FocusBox } from "../../animators/FocusBox";
 const BooksGrid = () => {
 
   const books: BookProps[] = [{
-    title: "The Journals",
+    title: "Journals",
     author: "Keith Haring",
     year: 1988,
     tipper: "Sebas",

@@ -1,18 +1,20 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, TypographyProps, useColorModeValue } from "@chakra-ui/react";
 
 export interface GlowyTextProps {
   text: string;
+  fontSize: TypographyProps["fontSize"];
 }
 
-const GlowyText: React.FC<GlowyTextProps> = ({ text }) => (
+const GlowyText: React.FC<GlowyTextProps> = ({ text, fontSize }) => (
   <Text
+    color={useColorModeValue("palegoldenrod", "springgreen")}
     mt="xl"
-    fontSize="3xl"
+    fontSize={fontSize}
     fontWeight="black"
-    textShadow="2px 2px 20px #f0f"
+    textShadow="2px 2px 2px #f0f"
     transition="1s"
-    _hover={{ textShadow: "2px 2px 100px #f0f" }}>
+    _hover={{ textShadow: "2px 2px 10px #f0f" }}>
     {text}
   </Text>
 );
