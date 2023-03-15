@@ -76,8 +76,8 @@ const Book: React.FC<BookProps> = ({ author, title, cover, link, tipper }) => {
           transition="1s"
           overflow="hidden"
           backgroundImage={cover}
-          minHeight="2xl"
-          minWidth="md"
+          height="2xl"
+          width="md"
           backgroundSize="contain"
           backgroundRepeat="no-repeat"
           backgroundPosition="right"
