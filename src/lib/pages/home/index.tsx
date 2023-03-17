@@ -8,20 +8,19 @@ import {
   Image,
   Link,
   SimpleGrid,
-  Spacer,
   Stack,
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import { TipCards } from "./components/galleries/tips/TipCards";
-import { TitleText } from "./components/TitleText";
+import { motion } from "framer-motion";
+import { DownloadCTA } from "./components/banners/DownloadCTA";
 import { IntroBanner } from "./components/banners/IntroBanner";
 import { SharingIsCaringBanner } from "./components/banners/SharingIsCaringBanner";
-import { DownloadCTA } from "./components/banners/DownloadCTA";
 import { Featured, IconVariant } from "./components/Featured";
-import { motion } from "framer-motion";
-import { HeroText } from "./components/HeroText";
 import BooksGrid from "./components/galleries/books/BooksGrid";
+import { TipCards } from "./components/galleries/tips/TipCards";
+import { HeroText } from "./components/HeroText";
+import { TitleText } from "./components/TitleText";
 
 // @ts-ignore
 const Home = () => (
@@ -66,23 +65,22 @@ const Home = () => (
     <div id="foto's" />
     <DownloadCTA />
     {/*Boekenplank*/}
-    <HStack
-      justifyContent="center" mt="xl" fontWeight="black"
-      textShadow="2px 2px 20px #f0f"
-      transition="1s"
-      _hover={{ textShadow: "2px 2px 100px #f0f" }}
-      px="6xl">
-      <Text fontSize="7xl">🔮</Text>
-      <Spacer />
-      <Text
-        color="white"
-        fontSize="6xl"
+    <Text fontSize={{ sm: "4xl", md: "7xl" }}>
+      <HStack
+        justifyContent="center" mt="xl" fontWeight="black"
+        textShadow="2px 2px 20px #f0f"
+        transition="1s"
+        _hover={{ textShadow: "2px 2px 100px #f0f" }}
       >
-        Boekenplank
-      </Text>
-      <Spacer />
-      <Text fontSize="7xl">📚</Text>
-    </HStack>
+        <Text>🔮</Text>
+        <Text
+          color="white"
+        >
+          Boekenplank
+        </Text>
+        <Text>📚</Text>
+      </HStack>
+    </Text>
     <BooksGrid />
     {/*TIPS*/}
     <TitleText title={"Tips"} />

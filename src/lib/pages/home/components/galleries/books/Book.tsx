@@ -77,10 +77,10 @@ const Book: React.FC<BookProps> = ({ author, title, cover, link, tipper }) => {
           overflow="hidden"
           backgroundImage={cover}
           height="2xl"
-          width="md"
+          width="100%"
+          maxWidth="md"
           backgroundSize="contain"
           backgroundRepeat="no-repeat"
-          backgroundPosition="right"
         >
           <Box
             top="5%"
